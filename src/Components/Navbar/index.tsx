@@ -5,9 +5,11 @@ function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false);
 
   return (
-    // navbar
-    <div className={`h-[100px] block desktop:hidden ${expandNavbar ? '' : ''}`}>
-      {/* toggleButton class */}
+    <div
+      className={`h-auto block desktop:hidden bg-slate-500 ${
+        expandNavbar ? '' : ''
+      }`}
+    >
       <div className="w-full h-24 flex items-center justify-end">
         <button
           onClick={() => {
@@ -31,7 +33,7 @@ function Navbar() {
           </svg>
         </button>
       </div>
-      {/* links */}
+
       <div
         className={`w-full h-full flex items-center justify-center  ${
           expandNavbar ? 'flex-col justify-start mt-24' : 'hidden'
