@@ -3,7 +3,7 @@ export function AboutMe() {
     <div className="flex-row justify-center text-center font-extrabold m-10 desktop:w-auto w-screen">
       <div className="flex justify-center align-center items-center">
         <div className="desktop:max-w-[60vw]">
-          <div> About My Huge Cock :)</div>
+          <div> About Me :)</div>
           <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
