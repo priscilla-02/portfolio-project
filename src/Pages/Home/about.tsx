@@ -1,6 +1,6 @@
 export function AboutMe() {
   return (
-    <div className="flex-row justify-center text-center font-extrabold m-10 desktop:w-auto w-screen">
+    <div className="flex-row justify-center text-center font-extrabold p-10 desktop:w-auto w-screen">
       <div className="flex justify-center align-center items-center">
         <div className="desktop:max-w-[60vw]">
           <div> About Me :)</div>
