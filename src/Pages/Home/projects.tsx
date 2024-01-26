@@ -16,24 +16,33 @@ export function Projects() {
       project_name: 'comingup',
       description: 'WIP',
       tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
+      codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
+      projectURL: 'https://github.com/priscilla-02/nc-news',
     },
     {
       project_name: 'squareup',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
       tech_stack: ['React Native', 'Firebase', 'Javascript'],
+      codeURL: 'https://github.com/magnificent-angels/square-up',
+      projectURL:
+        'https://drive.google.com/file/d/1w4yHm1nqc0nBno0F_KjIfLEXcfv9tmRU/view',
     },
     {
       project_name: 'ncnews',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
       tech_stack: ['React', 'Javascript', 'Tailwind'],
+      codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
+      projectURL: 'https://github.com/priscilla-02/nc-news',
     },
     {
       project_name: 'ncnewsapi',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
       tech_stack: ['Node.js', 'Express.js', 'PostgreSQL'],
+      codeURL: 'https://github.com/priscilla-02/news-server',
+      projectURL: '',
     },
   ];
 
@@ -83,6 +92,31 @@ export function Projects() {
               >
                 <div>{project.project_name}</div>
                 <div>{project.description}</div>
+
+                <div className="mt-5">
+                  {project.project_name === 'comingup' ? (
+                    <p className="bg-gray-500 text-white font-bold py-2 px-4 border-b-4 border-gray-600 rounded m-5">
+                      Stay Tuned :)
+                    </p>
+                  ) : (
+                    <div>
+                      <a
+                        href={project.codeURL}
+                        target="_blank"
+                        className="bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-5"
+                      >
+                        Code
+                      </a>
+                      <a
+                        href={project.projectURL}
+                        target="_blank"
+                        className="bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-5"
+                      >
+                        Project
+                      </a>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
