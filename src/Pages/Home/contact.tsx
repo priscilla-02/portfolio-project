@@ -1,3 +1,7 @@
 export function Contact() {
-  return <div className="flex justify-center font-extrabold">contact me!</div>;
+  return (
+    <div className="flex justify-center items-center font-extrabold h-[300px]">
+      Contact me!
+    </div>
+  );
 }
