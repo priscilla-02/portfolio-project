@@ -15,24 +15,31 @@ export function Projects() {
     {
       project_name: 'comingup',
       description: 'WIP',
-      tech_stack: ['1', '2', '3'],
+      tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
     },
     {
       project_name: 'squareup',
-      description: 'mobile',
-      tech_stack: ['1', '2', '3'],
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
+      tech_stack: ['React Native', 'Firebase', 'Javascript'],
     },
     {
       project_name: 'ncnews',
-      description: 'lalal',
-      tech_stack: ['1', '2', '3'],
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
+      tech_stack: ['React', 'Javascript', 'Tailwind'],
     },
     {
       project_name: 'ncnewsapi',
-      description: 'lalalalalalalal',
-      tech_stack: ['1', '2', '3'],
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
+      tech_stack: ['Node.js', 'Express.js', 'PostgreSQL'],
     },
   ];
+
+  const formatTechName = (tech: string) => {
+    return tech.toLowerCase().replace(/[ .]|js$/g, '');
+  };
 
   return (
     <div>
@@ -49,7 +56,7 @@ export function Projects() {
           >
             <img
               key={project.project_name}
-              src={`/src/assets/images/project-images/${project.project_name}.png`}
+              src={`/src/assets/images/projects/${project.project_name}.png`}
               className={`z-[-1] w-full h-full transition-all duration-1000 ease-in-out
               ${
                 project.project_name === 'squareup' &&
@@ -68,8 +75,10 @@ export function Projects() {
             >
               {/* top-text-box */}
               <div
-                className={`flex justify-center align-center items-center flex-col p-10 text-white ${
-                  project.project_name === 'comingup' ? 'text-black' : ''
+                className={`flex justify-center align-center items-center flex-col p-10 ${
+                  project.project_name === 'comingup'
+                    ? 'text-black'
+                    : 'text-white'
                 }`}
               >
                 <div>{project.project_name}</div>
@@ -82,19 +91,47 @@ export function Projects() {
               className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out ${
                 isHovered === project.project_name
                   ? project.project_name === 'squareup'
-                    ? 'opacity-80 w-[50%] h-[50%] backdrop-blur-xl'
-                    : 'opacity-80 w-[30%] h-[30%] backdrop-blur-xl'
+                    ? 'opacity-80 w-[30%] h-[50%] backdrop-blur-xl'
+                    : 'opacity-80 w-[30%] h-[50%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'
               } `}
             >
               <div
-                className={`flex justify-center align-center items-center flex-col p-20 text-white ${
-                  project.project_name === 'comingup' ? 'text-black' : ''
+                className={`flex justify-center align-center items-center flex-col p-20 mr-20 ${
+                  project.project_name === 'comingup'
+                    ? 'text-black'
+                    : 'text-white'
                 }`}
               >
                 <div>Tech Stack:</div>
                 {project.tech_stack.map(tech => (
-                  <p>{tech}</p>
+                  <div key={tech} className="flex">
+                    {formatTechName(tech) === 'javascript' ||
+                    formatTechName(tech) === 'typescript' ? (
+                      <img
+                        src={`src/assets/images/skills/languages/${formatTechName(
+                          tech
+                        )}.svg`}
+                        alt={tech}
+                        className="w-[60px] h-[60px] m-2"
+                      />
+                    ) : (
+                      <img
+                        src={`src/assets/images/skills/frameworks/${formatTechName(
+                          tech
+                        )}.svg`}
+                        alt={tech}
+                        className={`w-[60px] h-[60px] m-2 ${
+                          project.project_name === 'ncnewsapi'
+                            ? 'bg-gray-300'
+                            : ''
+                        }`}
+                      />
+                    )}
+                    <p className="flex justify-center items-center mx-5">
+                      {tech}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>
