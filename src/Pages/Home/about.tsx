@@ -1,4 +1,4 @@
-import codingImageURL from '../../assets/images/aboutme-images/coding-image-url';
+import codingImageURL from '../../assets/images/aboutme/coding-image-url';
 
 export function AboutMe() {
   return (

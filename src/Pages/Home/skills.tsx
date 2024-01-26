@@ -30,7 +30,7 @@ export function Skills() {
             <img
               className="w-[50px] h-[50px] desktop:w-[120px] desktop:h-[120px] m-2"
               key={image}
-              src={`/src/assets/images/skill-images/languages/${image}.svg`}
+              src={`/src/assets/images/skills/languages/${image}.svg`}
               alt={image}
             />
           ))}
@@ -43,7 +43,7 @@ export function Skills() {
           {frameworksArray.map(image => (
             <img
               key={image}
-              src={`/src/assets/images/skill-images/frameworks/${image}.svg`}
+              src={`/src/assets/images/skills/frameworks/${image}.svg`}
               alt={image}
               className="w-[50px] h-[50px] desktop:w-[120px] desktop:h-[120px] m-2"
             />
