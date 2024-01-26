@@ -1,5 +1,5 @@
 import { AboutMe } from './about';
-import { Contact } from './contact';
+import { Connect } from './connect';
 import { Footer } from './footer';
 import { Projects } from './projects';
 
@@ -11,7 +11,7 @@ function Home() {
       <AboutMe />
       <Skills />
       <Projects />
-      <Contact />
+      <Connect />
       <Footer />
     </div>
   );

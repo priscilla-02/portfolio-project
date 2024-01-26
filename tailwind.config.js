@@ -6,6 +6,14 @@ module.exports = {
       tablet: '640px',
       desktop: '1024px',
     },
+    fontFamily: {
+      simpleNight: ['SimpleNight', 'sans'],
+      easyMind: ['EasyMind', 'sans'],
+      oliverKitchen: ['OliverKitchen', 'sans'],
+      quickSand: ['QuickSand', 'sans'],
+      dancingScript: ['DancingScript', 'sans'],
+      rato: ['Rato', 'sans'],
+    },
     extend: {
       colors: {
         TK: {

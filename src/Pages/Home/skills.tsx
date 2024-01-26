@@ -21,10 +21,28 @@ export function Skills() {
     <div id="skills" className="desktop:m-10">
       {/* <div onMouseEnter={() => setSkillDisplay(true)}>skills set</div>
       <div className={skillDisplay ? 'block' : 'hidden'}>JS</div> */}
-      <div className="font-extrabold text-center">Skills Set</div>
+      <div
+        className="text-center"
+        style={{
+          fontFamily: 'rato',
+          fontWeight: '100',
+          fontSize: '40px',
+        }}
+      >
+        Skills Set
+      </div>
 
-      <div className="flex flex-col items-center justify-center">
-        <div className="font-semibold">Languages:</div>
+      <div className="flex flex-col items-center justify-center m-10">
+        <div
+          style={{
+            fontFamily: 'rato',
+            fontWeight: '100',
+            fontSize: '26px',
+            textDecoration: 'underline',
+          }}
+        >
+          Languages
+        </div>
         <div className="flex pr-2">
           {languagesArray.map(image => (
             <img
@@ -38,7 +56,16 @@ export function Skills() {
       </div>
 
       <div className="flex flex-col items-center justify-center my-4">
-        <div className="font-semibold">Frameworks & Libraries: </div>
+        <div
+          style={{
+            fontFamily: 'rato',
+            fontWeight: '100',
+            fontSize: '26px',
+            textDecoration: 'underline',
+          }}
+        >
+          Frameworks & Libraries
+        </div>
         <div className="desktop:w-auto w-full flex flex-wrap pr-2 desktop:max-w-[50vw] items-center justify-center">
           {frameworksArray.map(image => (
             <img
