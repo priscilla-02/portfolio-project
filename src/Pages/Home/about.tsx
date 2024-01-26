@@ -22,16 +22,16 @@ export function AboutMe() {
           className="m-5 border-2 border-white p-2 rounded-full"
         />
       </div>
-      <div className="m-10 hidden desktop:visible">
+      <div className="m-10 desktop:visible">
         <a
           href="#projects"
-          className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-5 desktop:visible invisible"
+          className="bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-5 desktop:visible invisible"
         >
           Projects
         </a>
         <a
           href="#skills"
-          className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-5 desktop:visible invisible"
+          className="bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900  text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-5 desktop:visible invisible"
         >
           Skills
         </a>
