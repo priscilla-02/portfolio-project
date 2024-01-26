@@ -13,6 +13,11 @@ export function Projects() {
 
   const projectsArray = [
     {
+      project_name: 'comingup',
+      description: 'WIP',
+      tech_stack: ['1', '2', '3'],
+    },
+    {
       project_name: 'squareup',
       description: 'mobile',
       tech_stack: ['1', '2', '3'],
@@ -62,7 +67,11 @@ export function Projects() {
               }`}
             >
               {/* top-text-box */}
-              <div className="flex justify-center align-center items-center flex-col p-10 text-white">
+              <div
+                className={`flex justify-center align-center items-center flex-col p-10 text-white ${
+                  project.project_name === 'comingup' ? 'text-black' : ''
+                }`}
+              >
                 <div>{project.project_name}</div>
                 <div>{project.description}</div>
               </div>
@@ -78,7 +87,11 @@ export function Projects() {
                   : 'opacity-0 w-[10%] h-[10%]'
               } `}
             >
-              <div className="flex justify-center align-center items-center flex-col p-20 text-white">
+              <div
+                className={`flex justify-center align-center items-center flex-col p-20 text-white ${
+                  project.project_name === 'comingup' ? 'text-black' : ''
+                }`}
+              >
                 <div>Tech Stack:</div>
                 {project.tech_stack.map(tech => (
                   <p>{tech}</p>

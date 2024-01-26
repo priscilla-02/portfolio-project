@@ -1,7 +1,7 @@
 export function AboutMe() {
   return (
     <div className="flex-row justify-center text-center font-extrabold p-10 desktop:w-auto w-screen">
-      <div className="flex justify-center align-center items-center">
+      <div className="flex flex-col desktop:flex-row justify-center align-center items-center">
         <div className="desktop:max-w-[60vw]">
           <div> About Me :)</div>
           <div>
@@ -17,10 +17,10 @@ export function AboutMe() {
         <img
           alt="Coding"
           src="https://camo.githubusercontent.com/ebf5606c24de332408b8ab41c786d9593ef0e36b46ce48b21610fa7c53f5394a/68747470733a2f2f692e6962622e636f2f393246484c34642f7075736865656e636f64652e676966"
-          className="m-5"
+          className="m-5 border-2 border-white p-2 rounded-full"
         />
       </div>
-      <div className="m-10">
+      <div className="m-10 hidden desktop:visible">
         <a
           href="#projects"
           className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-5 desktop:visible invisible"
