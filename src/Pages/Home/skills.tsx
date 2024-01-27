@@ -46,10 +46,10 @@ export function Skills() {
         <div className="flex pr-2">
           {languagesArray.map(image => (
             <img
-              className="w-[50px] h-[50px] desktop:w-[120px] desktop:h-[120px] m-2"
               key={image}
               src={`/src/assets/images/skills/languages/${image}.svg`}
               alt={image}
+              className="w-[50px] h-[50px] desktop:w-[120px] desktop:h-[120px] m-2"
             />
           ))}
         </div>

@@ -14,7 +14,8 @@ export function Projects() {
   const projectsArray = [
     {
       project_name: 'comingup',
-      description: 'WIP',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
       tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
       codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
       projectURL: 'https://github.com/priscilla-02/nc-news',
@@ -87,7 +88,7 @@ export function Projects() {
             <div
               className={`absolute flex flex-col items-center justify-center align-center z-2 top-0 left-0 bg-gray transition-all duration-1000 ease-in-out ${
                 isHovered === project.project_name
-                  ? 'opacity-80 w-[50%] h-[70%] backdrop-blur-xl'
+                  ? 'opacity-80 w-[50%] h-[50%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'
               }`}
             >

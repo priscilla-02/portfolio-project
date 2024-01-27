@@ -43,8 +43,8 @@ export function AboutMe() {
           </div>
         </div>
         <img
-          alt="Coding"
           src={codingImageURL}
+          alt="GIF: A kitten coding on a laptop"
           className="m-5 border-2 border-white p-2 rounded-full shadow-2xl"
         />
       </div>
