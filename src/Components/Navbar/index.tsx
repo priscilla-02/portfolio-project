@@ -115,7 +115,7 @@ function Navbar() {
               onMouseLeave={() => setIsConnectHovered(false)}
             >
               <img
-                src={`src/assets/icons/projects-${
+                src={`src/assets/icons/connect-${
                   isConnectHovered ? 'solid' : 'outline'
                 }.svg`}
                 className="w-12 h-12"
