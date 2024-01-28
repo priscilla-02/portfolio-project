@@ -104,6 +104,8 @@ export function Projects() {
                   fontFamily: 'rato',
                   fontWeight: '100',
                   fontSize: '18px',
+                  // borderRadius: '10% 30% 70% 70%',
+                  // border: '2px solid red',
                 }}
               >
                 <div className="underline pt-5">{project.project_name}</div>
@@ -200,7 +202,6 @@ export function Projects() {
                     : 'text-white'
                 }`}
               >
-                <div className="underline">Tech Stack</div>
                 {project.tech_stack.map(tech => (
                   <div key={tech} className="flex">
                     {formatTechName(tech) === 'javascript' ||

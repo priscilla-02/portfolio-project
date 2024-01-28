@@ -123,7 +123,7 @@ function Navbar() {
               />
 
               <a
-                href="#contact"
+                href="#connect"
                 className={`w-full text-center  ${
                   expandNavbar ? 'w-full text-center m-8' : 'hidden'
                 }`}

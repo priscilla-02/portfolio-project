@@ -1,21 +1,45 @@
-import codingImageURL from '../../assets/images/aboutme/coding-image-url';
+import { useState } from 'react';
+import codingGIF from '../../assets/images/aboutme/coding-gif';
 
 export function AboutMe() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="flex-row justify-center text-center font-extrabold p-10 desktop:w-auto w-screen">
+    <div className="flex-row justify-center text-center p-10 desktop:w-auto w-screen">
       <div className="flex flex-col desktop:flex-row justify-center align-center items-center">
-        <div
-          className="desktop:max-w-[60vw]"
-          style={{
-            fontFamily: 'rato',
-            fontWeight: '100',
-          }}
-        >
-          <div className="text-4xl pb-5">About Me :)</div>
+        <div className="desktop:max-w-[60vw]">
+          {/* <header
+            className="mask text-7xl font-bold pb-5 px-10"
+            style={{
+              fontFamily: 'quicksand',
+            }}
+          >
+            PRISCILLA CHAN
+          </header>
+
+          <header
+            className="mask text-6xl font-bold pb-5 px-10"
+            style={{
+              fontFamily: 'rato',
+            }}
+          >
+            PRISCILLA CHAN
+          </header> */}
+
+          <header
+            className="mask text-9xl font-bold pb-5 px-10"
+            style={{
+              fontFamily: 'OliverKitchen',
+            }}
+          >
+            PRISCILLA CHAN
+          </header>
+
           <div
             className="text-2xl"
             style={{
               fontFamily: 'quickSand',
+              fontWeight: '800',
             }}
           >
             [quickSand] Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -42,12 +66,58 @@ export function AboutMe() {
             culpa qui officia deserunt mollit anim id est laborum.
           </div>
         </div>
-        <img
-          src={codingImageURL}
-          alt="GIF: A kitten coding on a laptop"
-          className="m-5 border-2 border-white p-2 rounded-full shadow-2xl"
-        />
+
+        <div
+          className="image-container relative"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          style={{
+            fontFamily: 'rato',
+          }}
+        >
+          <img
+            src={
+              isHovered
+                ? 'src/assets/images/aboutme/coding-image.png'
+                : codingGIF
+            }
+            alt={
+              isHovered
+                ? 'Image of a kitten coding on a laptop'
+                : 'GIF of a kitten coding on a laptop'
+            }
+            className={`m-5 border-2 border-white p-2 rounded-full shadow-[0_0px_30px_-0px_rgba(0,0,0,0.5)] cursor-pointer w-[400px] h-[400px] ${
+              isHovered ? 'rotate-out filter-effect blur-md' : 'rotate-in'
+            }`}
+          />
+
+          <div
+            className={`absolute top-0 left-0 right-0 bottom-0 m-auto flex flex-col items-center justify-center text-blue-600 text-3xl font-extrabold max-w-[85%] ${
+              isHovered
+                ? 'visible transition-all duration-5000 ease-in-out text-opacity-100'
+                : 'hidden text-opacity-10'
+            }`}
+          >
+            <p>Fun Facts:</p>
+            <p>I am tringul</p>
+            <p>I could eat suishi everyday</p>
+            <p>"Friends" is my all-time favourite sitcom</p>
+          </div>
+          <div
+            className={`flex justify-center items-center text-sm ${
+              isHovered ? 'invisible' : 'visible'
+            }`}
+          >
+            <p>Flip to know a little more about me</p>
+            <img
+              src="src/assets/icons/right-arrow.svg"
+              className="w-6 h-6 ml-1"
+            />
+          </div>
+        </div>
       </div>
+
+      {/* Links */}
       <div className="m-20 desktop:visible">
         <a
           href="#projects"
