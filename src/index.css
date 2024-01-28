@@ -13,6 +13,28 @@ img {
   height: auto;
 }
 
+.image-container {
+  position: relative;
+}
+
+.rotate-in,
+.rotate-out,
+.filter-effect {
+  transition: transform 1.2s ease-in-out, filter 1.8s ease-in-out;
+}
+
+.rotate-in {
+  transform: rotateY(0deg);
+}
+
+.rotate-out {
+  transform: rotateY(180deg);
+}
+
+.filter-effect {
+  filter: grayscale(100%) blur(3px);
+}
+
 @font-face {
   font-family: 'SimpleNight';
   src: url('/src/font/Simple Night.otf') format('truetype');
@@ -41,4 +63,11 @@ img {
 @font-face {
   font-family: 'Rato';
   src: url('/src/font/Rato-PKBOx.otf') format('truetype');
+}
+
+.mask {
+  background: url('../src/assets/images/aboutme/background.jpeg') 0 0 / cover
+    no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
