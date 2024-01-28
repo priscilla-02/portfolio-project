@@ -7,19 +7,19 @@ export function Footer() {
   };
 
   return (
-    <div
-      className="flex h-auto p-10 bg-slate-600 justify-between items-center"
-      style={{
-        fontFamily: 'rato',
-        fontWeight: '800',
-        fontSize: '20px',
-      }}
-    >
-      <div className="flex items-center">
+    <footer className="flex h-auto p-10 bg-slate-600 justify-center align-center items-center">
+      <div
+        className="flex ml-auto"
+        style={{
+          fontFamily: 'rato',
+          fontWeight: '800',
+          fontSize: '20px',
+        }}
+      >
         © Copyright 2024. All Rights Reserved.
       </div>
 
-      <div className="text-black p-2 border-solid border-black border-2 rounded-full w-12 h-12">
+      <div className="flex text-black p-2 border-solid border-black border-2 rounded-full w-12 h-12 ml-auto">
         <button onClick={() => scrollToTop()}>
           <img
             src="src/assets/icons/arrow.svg"
@@ -28,6 +28,6 @@ export function Footer() {
           />
         </button>
       </div>
-    </div>
+    </footer>
   );
 }
