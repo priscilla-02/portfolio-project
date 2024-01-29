@@ -1,17 +1,17 @@
 import { useState } from 'react';
-// import { DarkModeToggle } from './darkmode';
 import { useTheme } from '../../Hooks/themeHook';
 import codingGIF from '../../assets/images/aboutme/coding-gif';
+import { funFactsAboutMe } from '../../Constants';
 
 export function AboutMe() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
   const { isDarkMode } = useTheme();
 
   return (
     <div
       className={`flex-row justify-center text-center p-10 desktop:w-auto w-screen ${
         isDarkMode ? 'bg-slate-500' : 'bg-white'
-      } `}
+      }`}
     >
       <div className="flex flex-col desktop:flex-row justify-center align-center items-center">
         <div className="desktop:max-w-[60vw]">
@@ -74,7 +74,7 @@ export function AboutMe() {
           </div>
         </div>
 
-        <div
+        <section
           className="image-container relative"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -101,16 +101,15 @@ export function AboutMe() {
           />
 
           <div
-            className={`absolute top-0 left-0 right-0 bottom-0 m-auto flex flex-col items-center justify-center text-blue-600 text-3xl font-extrabold max-w-[85%] ${
+            className={`absolute top-0 left-0 right-0 bottom-0 m-auto flex flex-col items-center justify-center text-blue-500 text-2xl font-thin max-w-[85%] ${
               isHovered
                 ? 'visible transition-all duration-5000 ease-in-out text-opacity-100'
-                : 'hidden text-opacity-10'
+                : 'hidden text-opacity-0'
             }`}
           >
-            <p>Fun Facts:</p>
-            <p>I am tringul</p>
-            <p>I could eat suishi everyday</p>
-            <p>"Friends" is my all-time favourite sitcom</p>
+            {funFactsAboutMe.map(fact => (
+              <p key={fact}>{fact}</p>
+            ))}
           </div>
           <div
             className={`flex justify-center items-center text-sm ${
@@ -123,7 +122,7 @@ export function AboutMe() {
               className="w-6 h-6 ml-1"
             />
           </div>
-        </div>
+        </section>
       </div>
 
       {/* Links */}

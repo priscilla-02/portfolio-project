@@ -1,4 +1,5 @@
 import { useTheme } from '../../Hooks/themeHook';
+
 export const DarkModeToggle = () => {
   const { toggleDarkMode, isDarkMode } = useTheme();
   return (

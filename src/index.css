@@ -58,7 +58,7 @@ img {
 }
 
 .filter-effect {
-  filter: grayscale(100%) blur(3px);
+  filter: grayscale(70%) blur(6px);
 }
 
 @font-face {

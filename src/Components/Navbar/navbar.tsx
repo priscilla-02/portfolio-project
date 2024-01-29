@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { DarkModeToggle } from './darkmode';
 import { useTheme } from '../../Hooks/themeHook';
-function Navbar() {
-  const [expandNavbar, setExpandNavbar] = useState(false);
-  const [isHomeHovered, setIsHomeHovered] = useState(false);
-  const [isProjectsHovered, setIsProjectsHovered] = useState(false);
-  const [isConnectHovered, setIsConnectHovered] = useState(false);
+
+export default function Navbar() {
+  const [expandNavbar, setExpandNavbar] = useState<boolean>(false);
+  const [isHomeHovered, setIsHomeHovered] = useState<boolean>(false);
+  const [isProjectsHovered, setIsProjectsHovered] = useState<boolean>(false);
+  const [isConnectHovered, setIsConnectHovered] = useState<boolean>(false);
   const { toggleDarkMode, isDarkMode } = useTheme();
+
   return (
     <div
       className={`h-auto pb-20  ${expandNavbar ? '' : ''} ${
@@ -36,7 +38,8 @@ function Navbar() {
           </button>
         </div>
       </div>
-      <div
+
+      <nav
         className={`w-full h-full my-20 flex items-center justify-center  ${
           expandNavbar ? 'flex-col justify-start mt-24' : 'hidden'
         }`}
@@ -132,8 +135,7 @@ function Navbar() {
             </div>
           </div>
         </div>
-      </div>
+      </nav>
     </div>
   );
 }
-export default Navbar;

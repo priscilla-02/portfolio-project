@@ -1,7 +1,11 @@
 import { useState } from 'react';
+import { useTheme } from '../../Hooks/themeHook';
+import { projectsArray } from '../../Constants';
+import { formatTechName } from '../../Utils/formatTechName';
 
 export function Projects() {
   const [isHovered, setIsHovered] = useState<null | string>(null);
+  const { isDarkMode } = useTheme();
 
   const handleProjectEnter = (projectName: string) => {
     setIsHovered(projectName);
@@ -11,51 +15,11 @@ export function Projects() {
     setIsHovered(null);
   };
 
-  const projectsArray = [
-    {
-      project_name: 'comingup',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
-      tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
-      codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
-      projectURL: 'https://github.com/priscilla-02/nc-news',
-    },
-    {
-      project_name: 'squareup',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
-      tech_stack: ['React Native', 'Firebase', 'Javascript'],
-      codeURL: 'https://github.com/magnificent-angels/square-up',
-      projectURL:
-        'https://drive.google.com/file/d/1w4yHm1nqc0nBno0F_KjIfLEXcfv9tmRU/view',
-    },
-    {
-      project_name: 'ncnews',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
-      tech_stack: ['React', 'Javascript', 'Tailwind'],
-      codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
-      projectURL: 'https://github.com/priscilla-02/nc-news',
-    },
-    {
-      project_name: 'ncnewsapi',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
-      tech_stack: ['Node.js', 'Express.js', 'PostgreSQL'],
-      codeURL: 'https://github.com/priscilla-02/news-server',
-      projectURL: '',
-    },
-  ];
-
-  const formatTechName = (tech: string) => {
-    return tech.toLowerCase().replace(/[ .]|js$/g, '');
-  };
-
   return (
-    <div>
-      <div
+    <div className={`${isDarkMode ? 'bg-slate-500' : 'bg-white'}`}>
+      <section
         id="projects"
-        className="flex justify-center mt-40"
+        className="flex justify-center pt-40"
         style={{
           fontFamily: 'rato',
           fontWeight: '100',
@@ -63,7 +27,7 @@ export function Projects() {
         }}
       >
         Projects
-      </div>
+      </section>
       <div className="relative cursor-zoom-in overflow-hidden flex-col justify-center items-center align-center flex">
         {projectsArray.map(project => (
           <div
@@ -91,7 +55,7 @@ export function Projects() {
               }`}
             >
               {/* top-text-box */}
-              <div
+              <section
                 className={`flex justify-center align-center items-center flex-col p-10 
                  ${
                    project.project_name === 'comingup'
@@ -102,8 +66,6 @@ export function Projects() {
                   fontFamily: 'rato',
                   fontWeight: '100',
                   fontSize: '18px',
-                  // borderRadius: '10% 30% 70% 70%',
-                  // border: '2px solid red',
                 }}
               >
                 <div className="underline pt-5">{project.project_name}</div>
@@ -175,7 +137,7 @@ export function Projects() {
                     </div>
                   )}
                 </div>
-              </div>
+              </section>
             </div>
 
             {/* bottom-text-box */}
@@ -193,7 +155,7 @@ export function Projects() {
                 fontSize: '18px',
               }}
             >
-              <div
+              <section
                 className={`flex justify-center align-center items-center flex-col p-20 mr-20 ${
                   project.project_name === 'comingup'
                     ? 'text-black'
@@ -229,7 +191,7 @@ export function Projects() {
                     </p>
                   </div>
                 ))}
-              </div>
+              </section>
             </div>
           </div>
         ))}

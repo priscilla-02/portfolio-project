@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useTheme } from '../../Hooks/themeHook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export function Connect() {
   const [isHovered, setIsHovered] = useState<null | string>(null);
+  const { isDarkMode } = useTheme();
 
   const handleIconEnter = (iconName: string) => {
     setIsHovered(iconName);
@@ -16,7 +18,9 @@ export function Connect() {
   return (
     <div
       id="connect"
-      className="flex justify-center items-center font-extrabold h-[500px]"
+      className={`flex justify-center items-center font-extrabold h-[500px] ${
+        isDarkMode ? 'bg-slate-500' : 'bg-white'
+      }`}
     >
       <div className="flex-col">
         <p
@@ -28,6 +32,7 @@ export function Connect() {
         >
           Connect with me here:
         </p>
+
         <div className="flex items-center align-center justify-center">
           <div
             className={`mx-7 ${
@@ -47,7 +52,7 @@ export function Connect() {
                     : ''
                 }`}
               >
-                <GitHubIcon style={{ fontSize: 70 }} />
+                <GitHubIcon style={{ fontSize: 50 }} />
               </div>
             </a>
           </div>
@@ -72,7 +77,7 @@ export function Connect() {
                     : ''
                 }`}
               >
-                <LinkedInIcon style={{ fontSize: 80 }} />
+                <LinkedInIcon style={{ fontSize: 60 }} />
               </div>
             </a>
           </div>
