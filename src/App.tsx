@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar/navbar';
-import Contact from './Pages/Contact';
-import About from './Pages/About';
 import Home from './Pages/Home';
+import { Connect } from './Pages/Home/connect';
+import { AboutMe } from './Pages/Home/about';
 
 const App: React.FC = () => {
   return (
@@ -10,8 +10,8 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<AboutMe />} />
+        <Route path="/connect" element={<Connect />} />
       </Routes>
     </BrowserRouter>
   );
