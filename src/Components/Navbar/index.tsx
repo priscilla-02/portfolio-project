@@ -1,33 +1,28 @@
 import { useState } from 'react';
 import { DarkModeToggle } from './darkmode';
-
+import { useTheme } from '../../Hooks/themeHook';
 function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isHomeHovered, setIsHomeHovered] = useState(false);
   const [isProjectsHovered, setIsProjectsHovered] = useState(false);
   const [isConnectHovered, setIsConnectHovered] = useState(false);
-
+  const { toggleDarkMode, isDarkMode } = useTheme();
   return (
     <div
       className={`h-auto pb-20  ${expandNavbar ? '' : ''} ${
-        isDarkMode ? 'bg-slate-600' : 'bg-white'
+        isDarkMode ? 'bg-slate-500' : 'bg-white'
       }`}
     >
       <div className="w-full h-24 flex items-center justify-between">
         <div className="ml-8 py-3 h-18 align-middle select-none transition duration-200 ease-in">
           <button
             onClick={() => {
-              setIsDarkMode(prev => !prev);
+              toggleDarkMode();
             }}
           >
-            <DarkModeToggle
-              isDarkMode={isDarkMode}
-              setIsDarkMode={setIsDarkMode}
-            />
+            <DarkModeToggle />
           </button>
         </div>
-
         <div className="mr-8">
           <button
             onClick={() => {
@@ -41,7 +36,6 @@ function Navbar() {
           </button>
         </div>
       </div>
-
       <div
         className={`w-full h-full my-20 flex items-center justify-center  ${
           expandNavbar ? 'flex-col justify-start mt-24' : 'hidden'
@@ -61,7 +55,6 @@ function Navbar() {
                 alt="Home Icon"
                 className="w-12 h-12"
               />
-
               <a
                 href="#aboutme"
                 className={`w-full text-center  ${
@@ -91,7 +84,6 @@ function Navbar() {
                 alt="Project Icon"
                 className="w-12 h-12"
               />
-
               <a
                 href="#projects"
                 className={`w-full text-center  ${
@@ -121,7 +113,6 @@ function Navbar() {
                 className="w-12 h-12"
                 alt="Connect Icon"
               />
-
               <a
                 href="#connect"
                 className={`w-full text-center  ${
@@ -145,5 +136,4 @@ function Navbar() {
     </div>
   );
 }
-
 export default Navbar;

@@ -1,11 +1,18 @@
 import { useState } from 'react';
+// import { DarkModeToggle } from './darkmode';
+import { useTheme } from '../../Hooks/themeHook';
 import codingGIF from '../../assets/images/aboutme/coding-gif';
 
 export function AboutMe() {
   const [isHovered, setIsHovered] = useState(false);
+  const { isDarkMode } = useTheme();
 
   return (
-    <div className="flex-row justify-center text-center p-10 desktop:w-auto w-screen">
+    <div
+      className={`flex-row justify-center text-center p-10 desktop:w-auto w-screen ${
+        isDarkMode ? 'bg-slate-500' : 'bg-white'
+      } `}
+    >
       <div className="flex flex-col desktop:flex-row justify-center align-center items-center">
         <div className="desktop:max-w-[60vw]">
           {/* <header
@@ -27,7 +34,7 @@ export function AboutMe() {
           </header> */}
 
           <header
-            className="mask text-9xl font-bold pb-5 px-10"
+            className="mask text-gradient text-8xl font-bold pb-5 px-10"
             style={{
               fontFamily: 'OliverKitchen',
             }}
@@ -68,7 +75,7 @@ export function AboutMe() {
         </div>
 
         <div
-          className="image-container relative"
+          className="image-container relative cursor-pointer"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           style={{
