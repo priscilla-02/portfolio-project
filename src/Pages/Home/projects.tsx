@@ -40,7 +40,7 @@ export function Projects() {
               src={`/src/assets/images/projects/${project.project_name}.png`}
               className={`m-2 z-[-1] w-full h-full transition-all duration-1000 ease-in-out
               ${
-                project.project_name === 'squareup' &&
+                project.project_name === 'SquareUp' &&
                 ' w-[50vw] max-h-[600px] object-contain'
               } 
               ${isHovered === project.project_name ? 'blur-sm' : ''}`}
@@ -58,7 +58,7 @@ export function Projects() {
               <section
                 className={`flex justify-center align-center items-center flex-col p-10 
                  ${
-                   project.project_name === 'comingup'
+                   project.project_name === 'Coming Up'
                      ? 'text-black'
                      : 'text-white'
                  }`}
@@ -68,11 +68,11 @@ export function Projects() {
                   fontSize: '18px',
                 }}
               >
-                <div className="underline pt-5">{project.project_name}</div>
+                <div className="underline py-5">{project.project_name}</div>
                 <div>{project.description}</div>
 
                 <div className="mt-5 flex">
-                  {project.project_name === 'comingup' ? (
+                  {project.project_name === 'Coming Up' ? (
                     <p className="bg-gray-500 text-white font-bold py-2 px-4 border-b-4 border-gray-600 rounded-full">
                       Stay Tuned :)
                     </p>
@@ -144,7 +144,7 @@ export function Projects() {
             <div
               className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out ${
                 isHovered === project.project_name
-                  ? project.project_name === 'squareup'
+                  ? project.project_name === 'SquareUp'
                     ? 'opacity-80 w-[30%] h-[50%] backdrop-blur-xl'
                     : 'opacity-80 w-[30%] h-[50%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'
@@ -157,7 +157,7 @@ export function Projects() {
             >
               <section
                 className={`flex justify-center align-center items-center flex-col p-20 mr-20 ${
-                  project.project_name === 'comingup'
+                  project.project_name === 'Coming Up'
                     ? 'text-black'
                     : 'text-white'
                 }`}
@@ -180,7 +180,7 @@ export function Projects() {
                         )}.svg`}
                         alt={tech}
                         className={`w-[60px] h-[60px] m-2 ${
-                          project.project_name === 'ncnewsapi'
+                          project.project_name === 'NC News API'
                             ? 'bg-gray-300'
                             : ''
                         }`}

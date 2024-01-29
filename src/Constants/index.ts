@@ -32,34 +32,34 @@ interface Project {
 
 export const projectsArray: Project[] = [
   {
-    project_name: 'comingup',
+    project_name: 'Coming Up',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
+      'A recipe finder application that provides a diverse range of culinary options, also allows user to customise recipe search with multiple filter options. From cuisine to dietary preferences, user can effortlessly find the perfect recipe to suit their taste.',
     tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
     codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
     projectURL: 'https://github.com/priscilla-02/nc-news',
   },
   {
-    project_name: 'squareup',
+    project_name: 'SquareUp',
     description:
-      'Lorem ipsum dol or sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
+      'A mobile appplication that enables board game enthusiasts to connect with each other, join and host events. Users can instantly message others, discover new games, and locate nearby events on a map.',
     tech_stack: ['React Native', 'Firebase', 'Javascript'],
     codeURL: 'https://github.com/magnificent-angels/square-up',
     projectURL:
       'https://drive.google.com/file/d/1w4yHm1nqc0nBno0F_KjIfLEXcfv9tmRU/view',
   },
   {
-    project_name: 'ncnews',
+    project_name: 'NC News',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
+      'A news application featuring current weather dashboard, sorting and ordering of articles by topic, author, popularity, etc., and user ability to select, sort, and order news articles for readin. The application also includes optimistic rendering, and conditional CSS rules.',
     tech_stack: ['React', 'Javascript', 'Tailwind'],
     codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
     projectURL: 'https://github.com/priscilla-02/nc-news',
   },
   {
-    project_name: 'ncnewsapi',
+    project_name: 'NC News API',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas ultricies. Odio morbi quis commodo odio aenean sed adipiscing. Pharetra diam sit amet nisl suscipit. In fermentum posuere urna nec tincidunt.',
+      'A REST API using TDD and following the MVC pattern. It serves up data such as articles, topics, comments on multiple endpoints, ultimately acting as the back end of a News web application.',
     tech_stack: ['Node.js', 'Express.js', 'PostgreSQL'],
     codeURL: 'https://github.com/priscilla-02/news-server',
     projectURL: '',
