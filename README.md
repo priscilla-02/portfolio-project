@@ -1,12 +1,10 @@
-Work In Progress:
-
-# Priscilla's Portfolio <img src="/src/assets/images/readme/portfolio.png" width="40" height="40" />
+# Priscilla's Portfolio <img src="/src/assets/images/readme/portfolio.png" width="35" height="35" />
 
 ## Welcome 👋
 
 My personal portfolio, built with React.js, TypeScript, and Tailwind CSS, serves as a showcase of my journey in software development. Through this platform, I present my professional expertise, accomplishments, and a collection of projects, all wrapped in a visually engaging and user-friendly experience. Explore and get a glimpse of the passion I bring to every line of code.
 
-Hosted Version: TBC
+Hosted version coming soon!
 
 ## Dependencies:
 
