@@ -1,6 +1,6 @@
 Work In Progress:
 
-# Priscilla's Portfolio <img src="/src/assets/images/readme/portfolio.png" width="50" height="50" /> <img src="/src/assets/images/readme/portfolio.png" width="40" height="40" />
+# Priscilla's Portfolio <img src="/src/assets/images/readme/portfolio.png" width="40" height="40" />
 
 ## Welcome 👋
 
