@@ -26,4 +26,4 @@ Run `npm istall` from your terminal to install the required dependencies
 
 To run the app locally, run the command `npm run dev`. This will open http://localhost:5173 in your browser.
 
-**4. Have fun broswing! Welcome any feedback and enhancement suggestiions**
+**4. Have fun exploring! Welcome any feedback and enhancement suggestions**
