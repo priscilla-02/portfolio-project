@@ -3,11 +3,11 @@ import { useState } from 'react';
 export function Projects() {
   const [isHovered, setIsHovered] = useState<null | string>(null);
 
-  const handleHover = (projectName: string) => {
+  const handleProjectEnter = (projectName: string) => {
     setIsHovered(projectName);
   };
 
-  const handleMouseLeave = () => {
+  const handleProjectLeave = () => {
     setIsHovered(null);
   };
 
@@ -54,6 +54,7 @@ export function Projects() {
   return (
     <div>
       <div
+        id="projects"
         className="flex justify-center mt-40"
         style={{
           fontFamily: 'rato',
@@ -63,15 +64,12 @@ export function Projects() {
       >
         Projects
       </div>
-      <div
-        id="projects"
-        className="relative cursor-pointer overflow-hidden flex-col justify-center items-center align-center flex"
-      >
+      <div className="relative cursor-zoom-in overflow-hidden flex-col justify-center items-center align-center flex">
         {projectsArray.map(project => (
           <div
             className="container m-10"
-            onMouseOver={() => handleHover(project.project_name)}
-            onMouseLeave={() => handleMouseLeave()}
+            onMouseOver={() => handleProjectEnter(project.project_name)}
+            onMouseLeave={() => handleProjectLeave()}
           >
             <img
               key={project.project_name}
