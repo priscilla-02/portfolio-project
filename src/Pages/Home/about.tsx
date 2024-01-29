@@ -75,7 +75,7 @@ export function AboutMe() {
         </div>
 
         <div
-          className="image-container relative cursor-pointer"
+          className="image-container relative"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           style={{
@@ -93,8 +93,10 @@ export function AboutMe() {
                 ? 'Image of a kitten coding on a laptop'
                 : 'GIF of a kitten coding on a laptop'
             }
-            className={`m-5 border-2 border-white p-2 rounded-full shadow-[0_0px_30px_-0px_rgba(0,0,0,0.5)] cursor-pointer w-[400px] h-[400px] ${
-              isHovered ? 'rotate-out filter-effect blur-md' : 'rotate-in'
+            className={`m-5 border-2 border-gray-400 p-2.5 rounded-full cursor-pointer w-[400px] h-[400px] ${
+              isHovered
+                ? 'rotate-out filter-effect blur-md ring-inset ring-[4px] ring-blue-400'
+                : 'rotate-in'
             }`}
           />
 
