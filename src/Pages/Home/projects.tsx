@@ -31,14 +31,14 @@ export function Projects() {
       <div className="relative cursor-zoom-in overflow-hidden flex-col justify-center items-center align-center flex">
         {projectsArray.map(project => (
           <div
-            className="container m-10"
+            className="container m-16"
             onMouseOver={() => handleProjectEnter(project.project_name)}
             onMouseLeave={() => handleProjectLeave()}
           >
             <img
               key={project.project_name}
               src={`/src/assets/images/projects/${project.project_name}.png`}
-              className={`m-2 z-[-1] w-full h-full transition-all duration-1000 ease-in-out
+              className={`z-[-1] w-full h-full transition-all duration-1000 ease-in-out
               ${
                 project.project_name === 'SquareUp' &&
                 ' w-[50vw] max-h-[600px] object-contain'
