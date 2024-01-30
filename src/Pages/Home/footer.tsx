@@ -23,7 +23,7 @@ export function Footer() {
 
       <div className="flex text-black p-2 border-solid border-black border-2 rounded-full w-13 h-13 ml-auto">
         <button onClick={() => scrollToTop()}>
-          <img src={topArrowIcon} className="w-10 h-19" alt="Top Arrow Icon" />
+          <img src={topArrowIcon} alt="Top Arrow Icon" className="w-10 h-19" />
         </button>
       </div>
     </footer>
