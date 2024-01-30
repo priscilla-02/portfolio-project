@@ -11,7 +11,7 @@
 }
 
 body {
-  cursor: url('../src/assets/icons/cursor.svg'), default;
+  cursor: url('../public/assets/icons/cursor.svg'), default;
 }
 
 .text-gradient {
@@ -92,7 +92,7 @@ img {
 }
 
 .mask {
-  background: url('../src/assets/images/aboutme/background.jpeg') 0 0 / cover
+  background: url('../public/assets/images/aboutme/background.jpeg') 0 0 / cover
     no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
