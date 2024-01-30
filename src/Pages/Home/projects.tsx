@@ -37,7 +37,7 @@ export function Projects() {
           >
             <img
               key={project.project_name}
-              src={`/src/assets/images/projects/${project.project_name}.png`}
+              src={`../../../public/assets/images/projects/${project.project_name}.png`}
               className={`z-[-1] w-full h-full transition-all duration-1000 ease-in-out
               ${
                 project.project_name === 'SquareUp' &&
@@ -167,7 +167,7 @@ export function Projects() {
                     {formatTechName(tech) === 'javascript' ||
                     formatTechName(tech) === 'typescript' ? (
                       <img
-                        src={`src/assets/images/skills/languages/${formatTechName(
+                        src={`../../../public/assets/images/skills/languages/${formatTechName(
                           tech
                         )}.svg`}
                         alt={tech}
@@ -175,7 +175,7 @@ export function Projects() {
                       />
                     ) : (
                       <img
-                        src={`src/assets/images/skills/frameworks/${formatTechName(
+                        src={`../../../public/assets/images/skills/frameworks/${formatTechName(
                           tech
                         )}.svg`}
                         alt={tech}

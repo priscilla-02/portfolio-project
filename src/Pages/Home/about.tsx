@@ -85,7 +85,7 @@ export function AboutMe() {
           <img
             src={
               isHovered
-                ? 'src/assets/images/aboutme/coding-image.png'
+                ? '../../../public/assets/images/aboutme/coding-image.png'
                 : codingGIF
             }
             alt={
@@ -117,7 +117,10 @@ export function AboutMe() {
             }`}
           >
             <p>Flip to know a little more about me</p>
-            <img src="src/assets/icons/right-arrow.svg" className="w-6 h-6" />
+            <img
+              src="../../../public/assets/icons/right-arrow.svg"
+              className="w-6 h-6"
+            />
           </div>
         </section>
       </div>
