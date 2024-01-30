@@ -1,3 +1,5 @@
+import topArrowIcon from '../../../public/assets/icons/arrow.svg';
+
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -21,11 +23,7 @@ export function Footer() {
 
       <div className="flex text-black p-2 border-solid border-black border-2 rounded-full w-13 h-13 ml-auto">
         <button onClick={() => scrollToTop()}>
-          <img
-            src="../../../public/assets/icons/arrow.svg"
-            className="w-10 h-19"
-            alt="Top Arrow Icon"
-          />
+          <img src={topArrowIcon} className="w-10 h-19" alt="Top Arrow Icon" />
         </button>
       </div>
     </footer>

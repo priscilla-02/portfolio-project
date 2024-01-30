@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { useTheme } from '../../Hooks/themeHook';
 import codingGIF from '../../../public/assets/images/aboutme/coding-gif';
+import codingImg from '../../../public/assets/images/aboutme/coding-image.png';
 import { funFactsAboutMe } from '../../Constants';
+
+import rightArrowIcon from '../../../public/assets/icons/right-arrow.svg';
 
 export function AboutMe() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -83,11 +86,7 @@ export function AboutMe() {
           }}
         >
           <img
-            src={
-              isHovered
-                ? '../../../public/assets/images/aboutme/coding-image.png'
-                : codingGIF
-            }
+            src={isHovered ? codingImg : codingGIF}
             alt={
               isHovered
                 ? 'Image of a kitten coding on a laptop'
@@ -117,10 +116,7 @@ export function AboutMe() {
             }`}
           >
             <p>Flip to know a little more about me</p>
-            <img
-              src="../../../public/assets/icons/right-arrow.svg"
-              className="w-6 h-6"
-            />
+            <img src={rightArrowIcon} className="w-6 h-6" />
           </div>
         </section>
       </div>
