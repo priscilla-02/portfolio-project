@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { DarkModeToggle } from './darkmode';
 import { useTheme } from '../../Hooks/themeHook';
+import menuIcon from '../../../public/assets/icons/menu.svg';
+import homeOutlineIcon from '../../../public/assets/icons/home-outline.svg';
+import homeSolidIcon from '../../../public/assets/icons/home-solid.svg';
+import projectOutlineIcon from '../../../public/assets/icons/projects-outline.svg';
+import projectSolidIcon from '../../../public/assets/icons/projects-solid.svg';
+import connectOutlineIcon from '../../../public/assets/icons/connect-outline.svg';
+import connectSolidIcon from '../../../public/assets/icons/connect-solid.svg';
 
 export default function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState<boolean>(false);
@@ -33,10 +40,7 @@ export default function Navbar() {
             className="mr-5 cursor-pointer block desktop:hidden"
           >
             <div className="w-10 h-10">
-              <img
-                src="../../../public/assets/icons/menu.svg"
-                alt="Menu Icon"
-              />
+              <img src={menuIcon} alt="Menu Icon" />
             </div>
           </button>
         </div>
@@ -55,9 +59,7 @@ export default function Navbar() {
               onMouseLeave={() => setIsHomeHovered(false)}
             >
               <img
-                src={`../../../public/assets/icons/home-${
-                  isHomeHovered ? 'solid' : 'outline'
-                }.svg`}
+                src={isHomeHovered ? homeSolidIcon : homeOutlineIcon}
                 alt="Home Icon"
                 className="w-12 h-12"
               />
@@ -84,9 +86,7 @@ export default function Navbar() {
               onMouseLeave={() => setIsProjectsHovered(false)}
             >
               <img
-                src={`../../../public/assets/icons/projects-${
-                  isProjectsHovered ? 'solid' : 'outline'
-                }.svg`}
+                src={isProjectsHovered ? projectSolidIcon : projectOutlineIcon}
                 alt="Project Icon"
                 className="w-12 h-12"
               />
@@ -113,9 +113,7 @@ export default function Navbar() {
               onMouseLeave={() => setIsConnectHovered(false)}
             >
               <img
-                src={`../../../public/assets/icons/connect-${
-                  isConnectHovered ? 'solid' : 'outline'
-                }.svg`}
+                src={isConnectHovered ? connectSolidIcon : connectOutlineIcon}
                 className="w-12 h-12"
                 alt="Connect Icon"
               />
