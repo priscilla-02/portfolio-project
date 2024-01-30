@@ -10,6 +10,12 @@ export function AboutMe() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const { isDarkMode } = useTheme();
 
+  const handleTouchEnd = () => {
+    setTimeout(() => {
+      setIsHovered(false);
+    }, 10000);
+  };
+
   return (
     <div
       className={`flex-row justify-center text-center p-10 desktop:w-auto w-screen ${
@@ -81,6 +87,8 @@ export function AboutMe() {
           className="image-container relative"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={() => setIsHovered(true)}
+          onTouchEnd={handleTouchEnd}
           style={{
             fontFamily: 'rato',
           }}
