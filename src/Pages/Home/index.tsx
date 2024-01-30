@@ -6,7 +6,7 @@ import { Skills } from './skills';
 
 function Home() {
   return (
-    <div className="bg-slate-500">
+    <div>
       <AboutMe />
       <Skills />
       <Projects />

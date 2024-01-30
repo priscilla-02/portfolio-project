@@ -18,7 +18,10 @@ export function Footer() {
           fontSize: '20px',
         }}
       >
-        © 2024 Priscilla Chan. All Rights Reserved.
+        <div>
+          <p>© 2024 Priscilla Chan.</p>
+          <p>All Rights Reserved.</p>
+        </div>
       </div>
 
       <div className="flex text-black p-2 border-solid border-black border-2 rounded-full w-13 h-13 ml-auto">
