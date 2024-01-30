@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTheme } from '../../Hooks/themeHook';
-import codingGIF from '../../assets/images/aboutme/coding-gif';
+import codingGIF from '../../../public/assets/images/aboutme/coding-gif';
 import { funFactsAboutMe } from '../../Constants';
 
 export function AboutMe() {
@@ -112,15 +112,12 @@ export function AboutMe() {
             ))}
           </div>
           <div
-            className={`flex justify-center items-center text-sm ${
+            className={`flex justify-center items-center text-xs ${
               isHovered ? 'invisible' : 'visible'
             }`}
           >
             <p>Flip to know a little more about me</p>
-            <img
-              src="src/assets/icons/right-arrow.svg"
-              className="w-6 h-6 ml-1"
-            />
+            <img src="src/assets/icons/right-arrow.svg" className="w-6 h-6" />
           </div>
         </section>
       </div>

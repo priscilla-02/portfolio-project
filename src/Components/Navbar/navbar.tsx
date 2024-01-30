@@ -33,7 +33,10 @@ export default function Navbar() {
             className="mr-5 cursor-pointer block desktop:hidden"
           >
             <div className="w-10 h-10">
-              <img src="src/assets/icons/menu.svg" alt="Menu Icon" />
+              <img
+                src="../../../public/assets/icons/menu.svg"
+                alt="Menu Icon"
+              />
             </div>
           </button>
         </div>
@@ -52,7 +55,7 @@ export default function Navbar() {
               onMouseLeave={() => setIsHomeHovered(false)}
             >
               <img
-                src={`src/assets/icons/home-${
+                src={`../../../public/assets/icons/home-${
                   isHomeHovered ? 'solid' : 'outline'
                 }.svg`}
                 alt="Home Icon"
@@ -81,7 +84,7 @@ export default function Navbar() {
               onMouseLeave={() => setIsProjectsHovered(false)}
             >
               <img
-                src={`src/assets/icons/projects-${
+                src={`../../../public/assets/icons/projects-${
                   isProjectsHovered ? 'solid' : 'outline'
                 }.svg`}
                 alt="Project Icon"
@@ -110,7 +113,7 @@ export default function Navbar() {
               onMouseLeave={() => setIsConnectHovered(false)}
             >
               <img
-                src={`src/assets/icons/connect-${
+                src={`../../../public/assets/icons/connect-${
                   isConnectHovered ? 'solid' : 'outline'
                 }.svg`}
                 className="w-12 h-12"
