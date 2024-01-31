@@ -24,7 +24,7 @@ export default function Navbar() {
 
     const timeoutId = setTimeout(() => {
       setTouchDelayTimeout(null);
-    }, 200);
+    }, 250);
     setTouchDelayTimeout(timeoutId);
   };
 
@@ -38,7 +38,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`h-auto pb-20  ${expandNavbar ? '' : ''} ${
+      className={`h-auto pb-20 ${expandNavbar ? '' : ''} ${
         isDarkMode ? 'bg-slate-500' : 'bg-white'
       }`}
     >
@@ -71,89 +71,87 @@ export default function Navbar() {
           expandNavbar ? 'flex-col justify-start mt-24' : 'hidden'
         }`}
       >
-        <div>
-          <div className="flex-col">
-            <div
-              className="flex justify-center items-center align-center"
-              onMouseEnter={() => setIsHomeHovered(true)}
-              onMouseLeave={() => setIsHomeHovered(false)}
+        <div className="flex-col">
+          <div
+            className="flex justify-center items-center align-center"
+            onMouseEnter={() => setIsHomeHovered(true)}
+            onMouseLeave={() => setIsHomeHovered(false)}
+          >
+            <img
+              src={isHomeHovered ? homeSolidIcon : homeOutlineIcon}
+              alt="Home Icon"
+              className="w-12 h-12"
+            />
+            <a
+              href="#aboutme"
+              className={`w-full text-center text-3xl ${
+                expandNavbar ? 'w-full text-center m-8' : 'hidden'
+              }`}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
+              onClick={() => {
+                setExpandNavbar(false);
+              }}
+              style={{
+                fontFamily: 'rato',
+              }}
             >
-              <img
-                src={isHomeHovered ? homeSolidIcon : homeOutlineIcon}
-                alt="Home Icon"
-                className="w-12 h-12"
-              />
-              <a
-                href="#aboutme"
-                className={`w-full text-center text-3xl ${
-                  expandNavbar ? 'w-full text-center m-8' : 'hidden'
-                }`}
-                onClick={() => {
-                  setExpandNavbar(false);
-                }}
-                style={{
-                  fontFamily: 'rato',
-                }}
-              >
-                Home
-              </a>
-            </div>
-            <div
-              className="flex justify-center items-center align-center"
-              onMouseEnter={() => setIsProjectsHovered(true)}
-              onMouseLeave={() => setIsProjectsHovered(false)}
+              Home
+            </a>
+          </div>
+          <div
+            className="flex justify-center items-center align-center"
+            onMouseEnter={() => setIsProjectsHovered(true)}
+            onMouseLeave={() => setIsProjectsHovered(false)}
+          >
+            <img
+              src={isProjectsHovered ? projectSolidIcon : projectOutlineIcon}
+              alt="Project Icon"
+              className="w-12 h-12"
+            />
+            <a
+              href="#projects"
+              className={`w-full text-center text-3xl ${
+                expandNavbar ? 'w-full text-center m-8' : 'hidden'
+              }`}
               onTouchStart={() => setIsProjectsHovered(true)}
               onTouchEnd={() => setIsProjectsHovered(false)}
+              onClick={() => {
+                setExpandNavbar(false);
+              }}
+              style={{
+                fontFamily: 'rato',
+              }}
             >
-              <img
-                src={isProjectsHovered ? projectSolidIcon : projectOutlineIcon}
-                alt="Project Icon"
-                className="w-12 h-12"
-              />
-              <a
-                href="#projects"
-                className={`w-full text-center text-3xl ${
-                  expandNavbar ? 'w-full text-center m-8' : 'hidden'
-                }`}
-                onClick={() => {
-                  setExpandNavbar(false);
-                }}
-                style={{
-                  fontFamily: 'rato',
-                }}
-              >
-                Projects
-              </a>
-            </div>
-            <div
-              className="flex justify-center items-center align-center"
-              onMouseEnter={() => setIsConnectHovered(true)}
-              onMouseLeave={() => setIsConnectHovered(false)}
+              Projects
+            </a>
+          </div>
+          <div
+            className="flex justify-center items-center align-center"
+            onMouseEnter={() => setIsConnectHovered(true)}
+            onMouseLeave={() => setIsConnectHovered(false)}
+          >
+            <img
+              src={isConnectHovered ? connectSolidIcon : connectOutlineIcon}
+              className="w-12 h-12"
+              alt="Connect Icon"
+            />
+            <a
+              href="#connect"
+              className={`w-full text-center text-3xl ${
+                expandNavbar ? 'w-full text-center m-8' : 'hidden'
+              }`}
               onTouchStart={() => setIsConnectHovered(true)}
               onTouchEnd={() => setIsConnectHovered(false)}
+              onClick={() => {
+                setExpandNavbar(false);
+              }}
+              style={{
+                fontFamily: 'rato',
+              }}
             >
-              <img
-                src={isConnectHovered ? connectSolidIcon : connectOutlineIcon}
-                className="w-12 h-12"
-                alt="Connect Icon"
-              />
-              <a
-                href="#connect"
-                className={`w-full text-center text-3xl ${
-                  expandNavbar ? 'w-full text-center m-8' : 'hidden'
-                }`}
-                onClick={() => {
-                  setExpandNavbar(false);
-                }}
-                style={{
-                  fontFamily: 'rato',
-                }}
-              >
-                Connect with Me
-              </a>
-            </div>
+              Connect
+            </a>
           </div>
         </div>
       </nav>
