@@ -96,7 +96,7 @@ export default function Navbar() {
                 fontFamily: 'rato',
               }}
             >
-              Home
+              Home 10sec
             </a>
           </div>
           <div
