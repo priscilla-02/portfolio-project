@@ -14,27 +14,7 @@ export default function Navbar() {
   const [isHomeHovered, setIsHomeHovered] = useState<boolean>(false);
   const [isProjectsHovered, setIsProjectsHovered] = useState<boolean>(false);
   const [isConnectHovered, setIsConnectHovered] = useState<boolean>(false);
-  const [touchDelayTimeout, setTouchDelayTimeout] = useState<number | null>(
-    null
-  );
   const { toggleDarkMode, isDarkMode } = useTheme();
-
-  const handleTouchStart = () => {
-    setIsHomeHovered(true);
-
-    const timeoutId = setTimeout(() => {
-      setTouchDelayTimeout(null);
-    }, 1000);
-    setTouchDelayTimeout(timeoutId);
-  };
-
-  const handleTouchEnd = () => {
-    setIsHomeHovered(false);
-    if (touchDelayTimeout !== null) {
-      clearTimeout(touchDelayTimeout);
-      setTouchDelayTimeout(null);
-    }
-  };
 
   return (
     <div
@@ -72,11 +52,7 @@ export default function Navbar() {
         }`}
       >
         <div className="flex-col">
-          <div
-            className="flex justify-center items-center align-center"
-            onMouseEnter={() => setIsHomeHovered(true)}
-            onMouseLeave={() => setIsHomeHovered(false)}
-          >
+          <div className="flex justify-center items-center align-center">
             <img
               src={isHomeHovered ? homeSolidIcon : homeOutlineIcon}
               alt="Home Icon"
@@ -87,8 +63,10 @@ export default function Navbar() {
               className={`w-full text-center text-3xl ${
                 expandNavbar ? 'w-full text-center m-8' : 'hidden'
               }`}
-              onTouchStart={handleTouchStart}
-              onTouchEnd={handleTouchEnd}
+              onMouseEnter={() => setIsHomeHovered(true)}
+              onMouseLeave={() => setIsHomeHovered(false)}
+              onTouchStart={() => setIsHomeHovered(true)}
+              onTouchEnd={() => setIsHomeHovered(false)}
               onClick={() => {
                 setExpandNavbar(false);
               }}
@@ -96,14 +74,10 @@ export default function Navbar() {
                 fontFamily: 'rato',
               }}
             >
-              Home 10sec
+              Home
             </a>
           </div>
-          <div
-            className="flex justify-center items-center align-center"
-            onMouseEnter={() => setIsProjectsHovered(true)}
-            onMouseLeave={() => setIsProjectsHovered(false)}
-          >
+          <div className="flex justify-center items-center align-center">
             <img
               src={isProjectsHovered ? projectSolidIcon : projectOutlineIcon}
               alt="Project Icon"
@@ -114,6 +88,8 @@ export default function Navbar() {
               className={`w-full text-center text-3xl ${
                 expandNavbar ? 'w-full text-center m-8' : 'hidden'
               }`}
+              onMouseEnter={() => setIsProjectsHovered(true)}
+              onMouseLeave={() => setIsProjectsHovered(false)}
               onTouchStart={() => setIsProjectsHovered(true)}
               onTouchEnd={() => setIsProjectsHovered(false)}
               onClick={() => {
@@ -126,11 +102,7 @@ export default function Navbar() {
               Projects
             </a>
           </div>
-          <div
-            className="flex justify-center items-center align-center"
-            onMouseEnter={() => setIsConnectHovered(true)}
-            onMouseLeave={() => setIsConnectHovered(false)}
-          >
+          <div className="flex justify-center items-center align-center">
             <img
               src={isConnectHovered ? connectSolidIcon : connectOutlineIcon}
               className="w-12 h-12"
@@ -141,6 +113,8 @@ export default function Navbar() {
               className={`w-full text-center text-3xl ${
                 expandNavbar ? 'w-full text-center m-8' : 'hidden'
               }`}
+              onMouseEnter={() => setIsConnectHovered(true)}
+              onMouseLeave={() => setIsConnectHovered(false)}
               onTouchStart={() => setIsConnectHovered(true)}
               onTouchEnd={() => setIsConnectHovered(false)}
               onClick={() => {
