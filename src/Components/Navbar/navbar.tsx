@@ -10,20 +10,20 @@ import connectOutlineIcon from '../../../public/assets/icons/connect-outline.svg
 import connectSolidIcon from '../../../public/assets/icons/connect-solid.svg';
 
 export default function Navbar() {
-  const [expandNavbar, setExpandNavbar] = useState<boolean>(false);
   const [isHomeHovered, setIsHomeHovered] = useState<boolean>(false);
   const [isProjectsHovered, setIsProjectsHovered] = useState<boolean>(false);
   const [isConnectHovered, setIsConnectHovered] = useState<boolean>(false);
-  const [touchDelayTimeout, setTouchDelayTimeout] = useState<number | null>(null)
+  const [touchDelayTimeout, setTouchDelayTimeout] = useState<number | null>(
+    null
+  );
   const { toggleDarkMode, isDarkMode } = useTheme();
 
   const handleTouchStart = () => {
     setIsHomeHovered(true);
-   
-    const timeoutId = setTimeout(() => {
 
+    const timeoutId = setTimeout(() => {
       setTouchDelayTimeout(null);
-    }, 200); 
+    }, 200);
     setTouchDelayTimeout(timeoutId);
   };
 
@@ -32,6 +32,7 @@ export default function Navbar() {
     if (touchDelayTimeout !== null) {
       clearTimeout(touchDelayTimeout);
       setTouchDelayTimeout(null);
+    }
   };
 
   return (
