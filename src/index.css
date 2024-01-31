@@ -18,8 +18,14 @@ body {
   cursor: url('../public/assets/icons/cursor.svg'), default;
 }
 
+@media only screen and (max-width: 768px) {
+  .text-gradient {
+    animation-duration: 5s;
+  }
+}
+
 .text-gradient {
-  animation: gradientAnimation 18s infinite;
+  animation: gradientAnimation 15s infinite;
 }
 
 @keyframes gradientAnimation {

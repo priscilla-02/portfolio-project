@@ -84,8 +84,8 @@ export default function Navbar() {
               className="flex justify-center items-center align-center"
               onMouseEnter={() => setIsProjectsHovered(true)}
               onMouseLeave={() => setIsProjectsHovered(false)}
-              onTouchStart={() => setIsHomeHovered(true)}
-              onTouchEnd={() => setIsHomeHovered(false)}
+              onTouchStart={() => setIsProjectHovered(true)}
+              onTouchEnd={() => setIsProjectsHovered(false)}
             >
               <img
                 src={isProjectsHovered ? projectSolidIcon : projectOutlineIcon}
@@ -111,8 +111,8 @@ export default function Navbar() {
               className="flex justify-center items-center align-center"
               onMouseEnter={() => setIsConnectHovered(true)}
               onMouseLeave={() => setIsConnectHovered(false)}
-              onTouchStart={() => setIsHomeHovered(true)}
-              onTouchEnd={() => setIsHomeHovered(false)}
+              onTouchStart={() => setIsConnectHovered(true)}
+              onTouchEnd={() => setIsConnectHovered(false)}
             >
               <img
                 src={isConnectHovered ? connectSolidIcon : connectOutlineIcon}
