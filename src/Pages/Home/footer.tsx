@@ -9,13 +9,11 @@ export function Footer() {
   };
 
   return (
-    <footer className="flex h-auto p-10 bg-slate-600 justify-center align-center items-center">
+    <footer className="flex h-auto p-10 bg-slate-600 justify-center align-center items-center desktop:text-xl text-sm">
       <div
         className="flex ml-auto"
         style={{
           fontFamily: 'rato',
-          fontWeight: '800',
-          fontSize: '20px',
         }}
       >
         <div>
@@ -24,11 +22,13 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="flex text-black p-2 border-solid border-black border-2 rounded-full w-13 h-13 ml-auto">
-        <button onClick={() => scrollToTop()}>
-          <img src={topArrowIcon} alt="Top Arrow Icon" className="w-10 h-19" />
-        </button>
-      </div>
+      <button onClick={() => scrollToTop()} className="flex text-black ml-auto">
+        <img
+          src={topArrowIcon}
+          alt="Top Arrow Icon"
+          className="border-solid border-gray-900 border-2 rounded-full desktop:w-13 desktop:h-13 w-9 h-9 p-1"
+        />
+      </button>
     </footer>
   );
 }

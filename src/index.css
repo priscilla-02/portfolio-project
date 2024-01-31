@@ -10,6 +10,10 @@
   overflow: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   cursor: url('../public/assets/icons/cursor.svg'), default;
 }
@@ -26,6 +30,13 @@ body {
   50% {
     background-position: 100% 50%;
   }
+}
+
+.mask {
+  background: url('../public/assets/images/aboutme/background.jpeg') 0 0 / cover
+    no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container {
@@ -89,11 +100,4 @@ img {
 @font-face {
   font-family: 'Rato';
   src: url('/src/font/Rato-PKBOx.otf') format('truetype');
-}
-
-.mask {
-  background: url('../public/assets/images/aboutme/background.jpeg') 0 0 / cover
-    no-repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }

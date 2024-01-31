@@ -16,14 +16,16 @@ export function Projects() {
   };
 
   return (
-    <div className={`${isDarkMode ? 'bg-slate-500' : 'bg-white'}`}>
+    <div
+      id="projects"
+      className={`desktop:pt-32 pt-36 ${
+        isDarkMode ? 'bg-slate-500' : 'bg-white'
+      }`}
+    >
       <section
-        id="projects"
-        className="flex justify-center pt-40"
+        className="flex justify-center text-4xl"
         style={{
           fontFamily: 'rato',
-          fontWeight: '100',
-          fontSize: '40px',
         }}
       >
         Projects
@@ -64,16 +66,16 @@ export function Projects() {
                  }`}
                 style={{
                   fontFamily: 'rato',
-                  fontWeight: '100',
-                  fontSize: '18px',
                 }}
               >
-                <div className="underline py-5">{project.project_name}</div>
+                <div className="underline py-5 desktop:text-xl text-sm">
+                  {project.project_name}
+                </div>
                 <div>{project.description}</div>
 
                 <div className="mt-5 flex">
                   {project.project_name === 'Coming Up' ? (
-                    <p className="bg-gray-500 text-white font-bold py-2 px-4 border-b-4 border-gray-600 rounded-full">
+                    <p className="bg-gray-500 text-white font-bold py-2 px-4 border-b-4 border-gray-600 rounded-full desktop:text-xl text-sm">
                       Stay Tuned :)
                     </p>
                   ) : (
@@ -142,7 +144,7 @@ export function Projects() {
 
             {/* bottom-text-box */}
             <div
-              className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out ${
+              className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out desktop:text-xl text-sm ${
                 isHovered === project.project_name
                   ? project.project_name === 'SquareUp'
                     ? 'opacity-80 w-[30%] h-[50%] backdrop-blur-xl'
@@ -151,8 +153,6 @@ export function Projects() {
               }`}
               style={{
                 fontFamily: 'rato',
-                fontWeight: '100',
-                fontSize: '18px',
               }}
             >
               <section

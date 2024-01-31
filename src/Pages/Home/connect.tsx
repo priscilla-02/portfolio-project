@@ -27,7 +27,6 @@ export function Connect() {
           className="mb-5 text-2xl"
           style={{
             fontFamily: 'rato',
-            fontWeight: '800',
           }}
         >
           Connect with me here:

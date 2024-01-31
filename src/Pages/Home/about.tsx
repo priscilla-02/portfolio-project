@@ -43,7 +43,7 @@ export function AboutMe() {
           </header> */}
 
           <header
-            className="mask text-gradient desktop:text-8xl text-7xl font-bold pb-5 px-10"
+            className="mask text-gradient desktop:text-8xl text-7xl font-bold pb-5"
             style={{
               fontFamily: 'OliverKitchen',
             }}
@@ -52,10 +52,9 @@ export function AboutMe() {
           </header>
 
           <div
-            className="text-2xl"
+            className="text-xl"
             style={{
               fontFamily: 'quickSand',
-              fontWeight: '800',
             }}
           >
             [quickSand] Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -67,10 +66,9 @@ export function AboutMe() {
             culpa qui officia deserunt mollit anim id est laborum.
           </div>
           <div
-            className="text-2xl"
+            className="text-xl"
             style={{
               fontFamily: 'rato',
-              fontWeight: '100',
             }}
           >
             [rato] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -100,7 +98,7 @@ export function AboutMe() {
                 ? 'Image of a kitten coding on a laptop'
                 : 'GIF of a kitten coding on a laptop'
             }
-            className={`m-5 border-2 border-gray-400 p-2.5 rounded-full cursor-pointer desktop:w-[400px] w-[380px] desktop:h-[400px] h-[380px] ${
+            className={`desktop:m-5 desktop:mt-0 mt-5 border-2 border-gray-400 p-2.5 rounded-full cursor-pointer desktop:w-[400px] desktop:h-[400px] w-[300px] h-[300px] ${
               isHovered
                 ? 'rotate-out filter-effect blur-md ring-inset ring-[4px] ring-blue-400'
                 : 'rotate-in'
@@ -108,7 +106,7 @@ export function AboutMe() {
           />
 
           <div
-            className={`absolute top-0 left-0 right-0 bottom-0 m-auto flex flex-col items-center justify-center text-blue-500 desktop:text-2xl text-xl font-thin desktop:max-w-[80%] max-w-[60%] ${
+            className={`absolute top-0 left-0 right-0 bottom-0 m-auto flex flex-col items-center justify-center text-blue-500 desktop:text-2xl text-base font-thin desktop:max-w-[80%] max-w-[60%] ${
               isHovered
                 ? 'visible transition-all duration-5000 ease-in-out text-opacity-100'
                 : 'hidden text-opacity-0'

@@ -23,7 +23,7 @@ export default function Navbar() {
       }`}
     >
       <div className="w-full h-24 flex items-center justify-between">
-        <div className="ml-8 py-3 h-18 align-middle select-none transition duration-200 ease-in">
+        <div className="ml-12 py-3 h-18 align-middle select-none transition duration-200 ease-in">
           <button
             onClick={() => {
               toggleDarkMode();
