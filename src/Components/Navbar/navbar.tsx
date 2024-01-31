@@ -10,6 +10,7 @@ import connectOutlineIcon from '../../../public/assets/icons/connect-outline.svg
 import connectSolidIcon from '../../../public/assets/icons/connect-solid.svg';
 
 export default function Navbar() {
+  const [expandNavbar, setExpandNavbar] = useState<boolean>(false);
   const [isHomeHovered, setIsHomeHovered] = useState<boolean>(false);
   const [isProjectsHovered, setIsProjectsHovered] = useState<boolean>(false);
   const [isConnectHovered, setIsConnectHovered] = useState<boolean>(false);
