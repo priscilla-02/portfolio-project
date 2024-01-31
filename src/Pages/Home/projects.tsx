@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTheme } from '../../Hooks/themeHook';
 import { projectsArray } from '../../Constants';
 import { formatTechName } from '../../Utils/formatTechName';
+import testImg from '../../../public/assets/images/projects/testing.jpeg';
 
 export function Projects() {
   const [isHovered, setIsHovered] = useState<null | string>(null);
@@ -31,6 +32,7 @@ export function Projects() {
         Projects
       </section>
       <div className="relative cursor-zoom-in overflow-hidden flex-col justify-center items-center align-center flex">
+        <div></div>
         {projectsArray.map(project => (
           <div
             className="container m-16"
@@ -38,8 +40,8 @@ export function Projects() {
             onMouseLeave={() => handleProjectLeave()}
           >
             <img
-              key={project.project_name}
-              src={`../../../public/assets/images/projects/${project.project_name}.png`}
+              key={project.project_image}
+              src={project.project_image}
               className={`z-[-1] w-full h-full transition-all duration-1000 ease-in-out
               ${
                 project.project_name === 'SquareUp' &&
@@ -108,34 +110,37 @@ export function Projects() {
                           </div>
                         </a>
                       </div>
-                      <div>
-                        <a
-                          href={project.projectURL}
-                          target="_blank"
-                          className="flex"
-                        >
-                          <div className="flex bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-full mx-2">
-                            <svg
-                              className="w-7 h-7"
-                              viewBox="0 0 16 16"
-                              fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                fill-rule="evenodd"
-                                d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
-                                clip-rule="evenodd"
-                              />
-                              <path
-                                fill-rule="evenodd"
-                                d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
-                                clip-rule="evenodd"
-                              />
-                            </svg>
-                            <div className="mx-2">Project</div>
-                          </div>
-                        </a>
-                      </div>
+
+                      {project.project_name !== 'NC News API' && (
+                        <div>
+                          <a
+                            href={project.projectURL}
+                            target="_blank"
+                            className="flex"
+                          >
+                            <div className="flex bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-full mx-2">
+                              <svg
+                                className="w-7 h-7"
+                                viewBox="0 0 16 16"
+                                fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
+                                  clip-rule="evenodd"
+                                />
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                              <div className="mx-2">Project</div>
+                            </div>
+                          </a>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>

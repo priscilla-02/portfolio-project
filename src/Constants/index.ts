@@ -1,3 +1,8 @@
+import comingUpImage from '../../public/assets/images/projects/Coming Up.png';
+import sqaureupImage from '../../public/assets/images/projects/SquareUp.png';
+import ncNewsImage from '../../public/assets/images/projects/NC News.png';
+import ncNewsApiImage from '../../public/assets/images/projects/NC News API.png';
+
 export const funFactsAboutMe: string[] = [
   '⭐ I am trilingual excluding programming langauages',
   '🍣 Daily cravings of sushi guaranteed',
@@ -28,6 +33,7 @@ interface Project {
   tech_stack: string[];
   codeURL: string;
   projectURL: string;
+  project_image: string;
 }
 
 export const projectsArray: Project[] = [
@@ -38,6 +44,7 @@ export const projectsArray: Project[] = [
     tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
     codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
     projectURL: 'https://github.com/priscilla-02/nc-news',
+    project_image: comingUpImage,
   },
   {
     project_name: 'SquareUp',
@@ -47,6 +54,7 @@ export const projectsArray: Project[] = [
     codeURL: 'https://github.com/magnificent-angels/square-up',
     projectURL:
       'https://drive.google.com/file/d/1w4yHm1nqc0nBno0F_KjIfLEXcfv9tmRU/view',
+    project_image: sqaureupImage,
   },
   {
     project_name: 'NC News',
@@ -55,13 +63,15 @@ export const projectsArray: Project[] = [
     tech_stack: ['React', 'Javascript', 'Tailwind'],
     codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
     projectURL: 'https://github.com/priscilla-02/nc-news',
+    project_image: ncNewsImage,
   },
   {
     project_name: 'NC News API',
     description:
-      'A REST API using TDD and following the MVC pattern. It serves up data such as articles, topics, comments on multiple endpoints, ultimately acting as the back end of a News web application.',
+      'A REST API using TDD and following the MVC pattern. It serves up data such as articles, topics, comments on multiple endpoints, ultimately acting as the back end of a news web application.',
     tech_stack: ['Node.js', 'Express.js', 'PostgreSQL'],
     codeURL: 'https://github.com/priscilla-02/news-server',
     projectURL: '',
+    project_image: ncNewsApiImage,
   },
 ];
