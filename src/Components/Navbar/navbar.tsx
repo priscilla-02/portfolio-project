@@ -57,6 +57,8 @@ export default function Navbar() {
               className="flex justify-center items-center align-center"
               onMouseEnter={() => setIsHomeHovered(true)}
               onMouseLeave={() => setIsHomeHovered(false)}
+              onTouchStart={() => setIsHomeHovered(true)}
+              onTouchEnd={() => setIsHomeHovered(false)}
             >
               <img
                 src={isHomeHovered ? homeSolidIcon : homeOutlineIcon}
@@ -65,7 +67,7 @@ export default function Navbar() {
               />
               <a
                 href="#aboutme"
-                className={`w-full text-center  ${
+                className={`w-full text-center text-3xl ${
                   expandNavbar ? 'w-full text-center m-8' : 'hidden'
                 }`}
                 onClick={() => {
@@ -73,8 +75,6 @@ export default function Navbar() {
                 }}
                 style={{
                   fontFamily: 'rato',
-                  fontWeight: '800',
-                  fontSize: '30px',
                 }}
               >
                 Home
@@ -84,6 +84,8 @@ export default function Navbar() {
               className="flex justify-center items-center align-center"
               onMouseEnter={() => setIsProjectsHovered(true)}
               onMouseLeave={() => setIsProjectsHovered(false)}
+              onTouchStart={() => setIsHomeHovered(true)}
+              onTouchEnd={() => setIsHomeHovered(false)}
             >
               <img
                 src={isProjectsHovered ? projectSolidIcon : projectOutlineIcon}
@@ -92,7 +94,7 @@ export default function Navbar() {
               />
               <a
                 href="#projects"
-                className={`w-full text-center  ${
+                className={`w-full text-center text-3xl ${
                   expandNavbar ? 'w-full text-center m-8' : 'hidden'
                 }`}
                 onClick={() => {
@@ -100,8 +102,6 @@ export default function Navbar() {
                 }}
                 style={{
                   fontFamily: 'rato',
-                  fontWeight: '800',
-                  fontSize: '30px',
                 }}
               >
                 Projects
@@ -111,6 +111,8 @@ export default function Navbar() {
               className="flex justify-center items-center align-center"
               onMouseEnter={() => setIsConnectHovered(true)}
               onMouseLeave={() => setIsConnectHovered(false)}
+              onTouchStart={() => setIsHomeHovered(true)}
+              onTouchEnd={() => setIsHomeHovered(false)}
             >
               <img
                 src={isConnectHovered ? connectSolidIcon : connectOutlineIcon}
@@ -119,7 +121,7 @@ export default function Navbar() {
               />
               <a
                 href="#connect"
-                className={`w-full text-center  ${
+                className={`w-full text-center text-3xl ${
                   expandNavbar ? 'w-full text-center m-8' : 'hidden'
                 }`}
                 onClick={() => {
@@ -127,8 +129,6 @@ export default function Navbar() {
                 }}
                 style={{
                   fontFamily: 'rato',
-                  fontWeight: '800',
-                  fontSize: '30px',
                 }}
               >
                 Connect with Me
