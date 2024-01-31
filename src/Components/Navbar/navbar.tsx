@@ -14,7 +14,25 @@ export default function Navbar() {
   const [isHomeHovered, setIsHomeHovered] = useState<boolean>(false);
   const [isProjectsHovered, setIsProjectsHovered] = useState<boolean>(false);
   const [isConnectHovered, setIsConnectHovered] = useState<boolean>(false);
+  const [touchDelayTimeout, setTouchDelayTimeout] = useState<number | null>(null)
   const { toggleDarkMode, isDarkMode } = useTheme();
+
+  const handleTouchStart = () => {
+    setIsHomeHovered(true);
+   
+    const timeoutId = setTimeout(() => {
+
+      setTouchDelayTimeout(null);
+    }, 200); 
+    setTouchDelayTimeout(timeoutId);
+  };
+
+  const handleTouchEnd = () => {
+    setIsHomeHovered(false);
+    if (touchDelayTimeout !== null) {
+      clearTimeout(touchDelayTimeout);
+      setTouchDelayTimeout(null);
+  };
 
   return (
     <div
@@ -57,8 +75,8 @@ export default function Navbar() {
               className="flex justify-center items-center align-center"
               onMouseEnter={() => setIsHomeHovered(true)}
               onMouseLeave={() => setIsHomeHovered(false)}
-              onTouchStart={() => setIsHomeHovered(true)}
-              onTouchEnd={() => setIsHomeHovered(false)}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
             >
               <img
                 src={isHomeHovered ? homeSolidIcon : homeOutlineIcon}
@@ -84,7 +102,7 @@ export default function Navbar() {
               className="flex justify-center items-center align-center"
               onMouseEnter={() => setIsProjectsHovered(true)}
               onMouseLeave={() => setIsProjectsHovered(false)}
-              onTouchStart={() => setIsProjectHovered(true)}
+              onTouchStart={() => setIsProjectsHovered(true)}
               onTouchEnd={() => setIsProjectsHovered(false)}
             >
               <img
