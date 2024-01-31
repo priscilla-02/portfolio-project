@@ -24,7 +24,7 @@ export default function Navbar() {
 
     const timeoutId = setTimeout(() => {
       setTouchDelayTimeout(null);
-    }, 250);
+    }, 1000);
     setTouchDelayTimeout(timeoutId);
   };
 
