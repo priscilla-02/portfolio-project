@@ -4,6 +4,7 @@ import comingUpImage from '/assets/images/projects/Coming Up.png';
 // import ncNewsApiImage from '/assets/images/projects/NC News API.png';
 import vueSVG from '/assets/images/skills/frameworks/vue.svg';
 import jsSVG from '/assets/images/skills/languages/javascript.svg';
+import bootstrapSVG from '/assets/images/skills/frameworks/bootstrap.svg';
 
 export const funFactsAboutMe: string[] = [
   '⭐ I am trilingual excluding programming langauages',
@@ -48,6 +49,7 @@ export const projectsArray: Project[] = [
     tech_stack_image: [
       vueSVG,
       jsSVG,
+      bootstrapSVG,
       'https://skillicons.dev/icons?i=bootstrap&theme=dark',
     ],
     codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
