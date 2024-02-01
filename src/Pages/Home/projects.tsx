@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTheme } from '../../Hooks/themeHook';
 import { projectsArray } from '../../Constants';
-import { formatTechName } from '../../Utils/formatTechName';
+// import { formatTechName } from '../../Utils/formatTechName';
 
 export function Projects() {
   const [isHovered, setIsHovered] = useState<null | string>(null);
@@ -147,7 +147,7 @@ export function Projects() {
             </div>
 
             {/* bottom-text-box */}
-            <div
+            {/* <div
               className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out desktop:text-xl text-sm ${
                 isHovered === project.project_name
                   ? project.project_name === 'SquareUp'
@@ -196,7 +196,41 @@ export function Projects() {
                   </div>
                 ))}
               </section>
+            </div> */}
+
+            {/* Test production evn */}
+            <div
+              className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out desktop:text-xl text-sm 
+              } ${
+                isHovered === project.project_name
+                  ? project.project_name === 'SquareUp'
+                    ? 'opacity-80 w-[30%] h-[50%] backdrop-blur-xl'
+                    : 'opacity-80 w-[30%] h-[50%] backdrop-blur-xl'
+                  : 'opacity-0 w-[10%] h-[10%]'
+              }`}
+              style={{
+                fontFamily: 'rato',
+              }}
+            >
+              <section
+                className={`flex justify-center align-center items-center flex-col p-20 mr-20 ${
+                  project.project_name === 'Coming Up'
+                    ? 'text-black'
+                    : 'text-white'
+                }`}
+              >
+                {project.tech_stack_image.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Tech Stack Image ${index}`}
+                    className="w-[60px] h-[60px] m-2"
+                  />
+                ))}
+              </section>
             </div>
+
+            {/* //// */}
           </div>
         ))}
       </div>
