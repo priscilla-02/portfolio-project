@@ -213,19 +213,24 @@ export function Projects() {
               }}
             >
               <section
-                className={`flex justify-center align-center items-center flex-col p-20 mr-20 ${
+                className={`flex justify-center align-center items-center flex-col desktop:p-20 desktop:mr-20 ${
                   project.project_name === 'Coming Up'
                     ? 'text-black'
                     : 'text-white'
                 }`}
               >
                 {project.tech_stack_image.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`Tech Stack Image ${index}`}
-                    className="w-[60px] h-[60px] m-2"
-                  />
+                  <div key={index} className="flex items-center my-2">
+                    <img
+                      src={image}
+                      alt={image}
+                      className={`desktop:w-[60px] desktop:h-[60px] w-[100%] h-[20px] desktop:m-2 desktop:ml-10 
+                      ${
+                        project.project_name === 'NC News API' && 'bg-gray-300'
+                      }`}
+                    />
+                    <span className="ml-3">{project.tech_stack[index]}</span>
+                  </div>
                 ))}
               </section>
             </div>

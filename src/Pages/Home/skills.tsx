@@ -1,7 +1,7 @@
 import { useTheme } from '../../Hooks/themeHook';
-import { frameworksArray, languagesArrayIcon } from '../../Constants';
-import javascriptIcon from '/assets/images/skills/languages/javascript.svg';
-import typescriptIcon from '/assets/images/skills/languages/typescript.svg';
+import { frameworksArrayIcon, languagesIconArray } from '../../Constants';
+// import javascriptIcon from '/assets/images/skills/languages/javascript.svg';
+// import typescriptIcon from '/assets/images/skills/languages/typescript.svg';
 
 export function Skills() {
   const { isDarkMode } = useTheme();
@@ -43,7 +43,7 @@ export function Skills() {
             <div className="flex-col">
               <div className="flex">
                 <p>map</p>
-                {languagesArrayIcon.map((image, index) => (
+                {languagesIconArray.map((image, index) => (
                   <img
                     key={index}
                     src={image}
@@ -52,10 +52,11 @@ export function Skills() {
                   />
                 ))}
               </div>
-              <div className="flex">
+              {/* <div className="flex">
                 <p>import icons</p>
                 <img
-                  className="desktop:w-[120px] desktop:h-[120px] m-2"
+                  className="desktop:w-[120px] desktop:h-[120px] m-2 
+                  "
                   src={javascriptIcon}
                   alt="javascriptIcon"
                 />
@@ -64,9 +65,9 @@ export function Skills() {
                   src={typescriptIcon}
                   alt="typescriptIcon"
                 />
-              </div>
+              </div> */}
             </div>
-            <div>
+            {/* <div>
               <div className="flex">
                 <p>test</p>
                 <img
@@ -75,7 +76,7 @@ export function Skills() {
                   alt="languages icon url"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -88,7 +89,7 @@ export function Skills() {
         >
           Frameworks & Libraries
         </div>
-        <div className="desktop:w-auto w-full flex flex-wrap pr-2 desktop:max-w-[50vw] items-center justify-center">
+        {/* <div className="desktop:w-auto w-full flex flex-wrap pr-2 desktop:max-w-[50vw] items-center justify-center">
           {frameworksArray.map(image => (
             <img
               key={image}
@@ -97,13 +98,26 @@ export function Skills() {
               className="w-[50px] h-[50px] desktop:w-[120px] desktop:h-[120px] m-2"
             />
           ))}
+        </div> */}
+
+        {/* {Test production env} */}
+        <div className="desktop:w-auto w-full flex flex-wrap pr-2 desktop:max-w-[50vw] items-center justify-center">
+          {frameworksArrayIcon.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Tech Stack Image ${index}`}
+              className="w-[50px] h-[50px] desktop:w-[120px] desktop:h-[120px] m-2"
+            />
+          ))}
         </div>
-        <p>test</p>
+
+        {/* <p>test</p>
         <img
           className="desktop:w-[45%] w-[60%] h-auto"
           src="https://skillicons.dev/icons?i=react,vue,html,css,firebase,tailwind,bootstrap,nodejs,express,postgres,jest,postman&perline=5&theme=light"
           alt="framworks icon url"
-        />
+        /> */}
       </section>
     </div>
   );
