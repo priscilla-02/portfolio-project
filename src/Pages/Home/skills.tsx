@@ -29,7 +29,6 @@ export function Skills() {
           Languages
         </div>
         <div className="flex pr-2">
-          {/* <p>map</p> */}
           {/* {languagesArray.map(image => (
             <img
               key={image}
@@ -42,7 +41,6 @@ export function Skills() {
           <div>
             <div className="flex-col">
               <div className="flex">
-                <p>map</p>
                 {languagesIconArray.map((image, index) => (
                   <img
                     key={index}

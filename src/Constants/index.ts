@@ -95,7 +95,7 @@ export const projectsArray: Project[] = [
   {
     project_name: 'NC News',
     description:
-      'A news application featuring current weather dashboard, sorting and ordering of articles by topic, author, popularity, etc., and user ability to select, sort, and order news articles for readin. The application also includes optimistic rendering, and conditional CSS rules.',
+      'A news application featuring current weather dashboard, sorting and ordering of articles by topic, author, popularity, etc., and user ability to select, sort, and order news articles for reading.',
     tech_stack: ['React', 'Javascript', 'Tailwind'],
     tech_stack_image: [reactSVG, jsSVG, tailwindSVG],
     codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',

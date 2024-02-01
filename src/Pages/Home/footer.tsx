@@ -26,7 +26,7 @@ export function Footer() {
         <img
           src={topArrowIcon}
           alt="Top Arrow Icon"
-          className="border-solid border-gray-900 border-2 rounded-full desktop:w-13 desktop:h-13 w-9 h-9 p-1"
+          className="border-solid border-black border-2 rounded-full desktop:w-13 desktop:h-13 w-9 h-9 p-1"
         />
       </button>
     </footer>

@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useTheme } from '../../Hooks/themeHook';
 import { projectsArray } from '../../Constants';
+import { useMediaQuery } from 'react-responsive';
 // import { formatTechName } from '../../Utils/formatTechName';
 
 export function Projects() {
   const [isHovered, setIsHovered] = useState<null | string>(null);
   const { isDarkMode } = useTheme();
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   const handleProjectEnter = (projectName: string) => {
     setIsHovered(projectName);
@@ -30,7 +32,7 @@ export function Projects() {
       >
         Projects
       </section>
-      <div className="relative cursor-zoom-in overflow-hidden flex-col justify-center items-center align-center flex">
+      <div className="relative cursor-zoom-in flex-col justify-center items-center align-center flex desktop:m-0 p-4">
         <div></div>
         {projectsArray.map(project => (
           <div
@@ -50,16 +52,18 @@ export function Projects() {
               alt={`${project.project_name} project`}
             />
 
+            {/* top-text-box */}
             <div
               className={`absolute flex flex-col items-center justify-center align-center z-2 top-0 left-0 bg-gray transition-all duration-1000 ease-in-out ${
                 isHovered === project.project_name
-                  ? 'opacity-80 w-[50%] h-[50%] backdrop-blur-xl'
+                  ? project.project_name === 'SquareUp'
+                    ? 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[55%] h-[45%] backdrop-blur-xl'
+                    : 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[50%] h-[60%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'
               }`}
             >
-              {/* top-text-box */}
               <section
-                className={`flex justify-center align-center items-center flex-col p-10 
+                className={`flex justify-center align-center items-center flex-col px-2
                  ${
                    project.project_name === 'Coming Up'
                      ? 'text-black'
@@ -69,14 +73,26 @@ export function Projects() {
                   fontFamily: 'rato',
                 }}
               >
-                <div className="underline py-5 desktop:text-xl text-sm">
+                <div
+                  className="underline"
+                  style={{
+                    fontSize: isDesktop ? '1.5rem' : '0.5rem',
+                  }}
+                >
                   {project.project_name}
                 </div>
-                <div>{project.description}</div>
+                <div style={{ fontSize: isDesktop ? '1.5rem' : '0.5rem' }}>
+                  {project.description}
+                </div>
 
-                <div className="mt-5 flex">
+                <div className="flex desktop:mt-5 mt-2">
                   {project.project_name === 'Coming Up' ? (
-                    <p className="bg-gray-500 text-white font-bold py-2 px-4 border-b-4 border-gray-600 rounded-full desktop:text-xl text-sm">
+                    <p
+                      className="bg-gray-500 text-white font-bold desktop:py-2 py-1 desktop:px-4 px-2 border-b-4 border-gray-600 rounded-full"
+                      style={{
+                        fontSize: isDesktop ? '1.5rem' : '0.5rem',
+                      }}
+                    >
                       Stay Tuned :)
                     </p>
                   ) : (
@@ -87,25 +103,32 @@ export function Projects() {
                           target="_blank"
                           className="flex"
                         >
-                          <div className="flex bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-full mx-2">
+                          <div className="flex bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold desktop:py-2 py-1 desktop:px-4 px-1 border-b-4 border-blue-700 hover:border-blue-500 rounded-full mx-2">
                             <svg
-                              className="w-7 h-7"
+                              className="desktop:w-7 desktop:h-7 w-3 h-3"
                               viewBox="0 0 16 16"
                               fill="currentColor"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                fill-rule="evenodd"
+                                fillRule="evenodd"
                                 d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
-                                clip-rule="evenodd"
+                                clipRule="evenodd"
                               />
                               <path
-                                fill-rule="evenodd"
+                                fillRule="evenodd"
                                 d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
-                                clip-rule="evenodd"
+                                clipRule="evenodd"
                               />
                             </svg>
-                            <div className="mx-2">Code</div>
+                            <div
+                              className="deesktop:mx-2 mx-1"
+                              style={{
+                                fontSize: isDesktop ? '1.2rem' : '0.5rem',
+                              }}
+                            >
+                              Code
+                            </div>
                           </div>
                         </a>
                       </div>
@@ -117,25 +140,32 @@ export function Projects() {
                             target="_blank"
                             className="flex"
                           >
-                            <div className="flex bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-full mx-2">
+                            <div className="flex bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold desktop:py-2 py-1 desktop:px-4 px-1 border-b-4 border-blue-700 hover:border-blue-500 rounded-full mx-2">
                               <svg
-                                className="w-7 h-7"
+                                className="desktop:w-7 desktop:h-7 w-3 h-3"
                                 viewBox="0 0 16 16"
                                 fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  fill-rule="evenodd"
+                                  fillRule="evenodd"
                                   d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
-                                  clip-rule="evenodd"
+                                  clipRule="evenodd"
                                 />
                                 <path
-                                  fill-rule="evenodd"
+                                  fillRule="evenodd"
                                   d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
-                                  clip-rule="evenodd"
+                                  clipRule="evenodd"
                                 />
                               </svg>
-                              <div className="mx-2">Project</div>
+                              <div
+                                className="deesktop:mx-2 mx-1"
+                                style={{
+                                  fontSize: isDesktop ? '1.2rem' : '0.5rem',
+                                }}
+                              >
+                                Project
+                              </div>
                             </div>
                           </a>
                         </div>
@@ -198,22 +228,19 @@ export function Projects() {
               </section>
             </div> */}
 
-            {/* Test production evn */}
+            {/* Bottom-text-top: Test production env */}
             <div
-              className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out desktop:text-xl text-sm 
+              className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out
               } ${
                 isHovered === project.project_name
                   ? project.project_name === 'SquareUp'
-                    ? 'opacity-80 w-[30%] h-[50%] backdrop-blur-xl'
+                    ? 'opacity-80 desktop:w-[0%] desktop:h-[50%] w-[40%] h-[30%] backdrop-blur-xl'
                     : 'opacity-80 w-[30%] h-[50%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'
               }`}
-              style={{
-                fontFamily: 'rato',
-              }}
             >
               <section
-                className={`flex justify-center align-center items-center flex-col desktop:p-20 desktop:mr-20 ${
+                className={`flex flex-col align-center items-center desktop:p-20 desktop:mr-20 ${
                   project.project_name === 'Coming Up'
                     ? 'text-black'
                     : 'text-white'
@@ -221,15 +248,32 @@ export function Projects() {
               >
                 {project.tech_stack_image.map((image, index) => (
                   <div key={index} className="flex items-center my-2">
+                    {/* <img
+                      src={image}
+                      alt={image}
+                      className={`flex desktop:w-[60px] desktop:h-[60px] w-[100%] h-[20px] desktop:m-2 desktop:ml-10 
+                      ${
+                        project.project_name === 'NC News API' && 'bg-gray-300'
+                      }`}
+                    /> */}
+
                     <img
                       src={image}
                       alt={image}
-                      className={`desktop:w-[60px] desktop:h-[60px] w-[100%] h-[20px] desktop:m-2 desktop:ml-10 
+                      className={`flex desktop:w-[60px] desktop:h-[60px] w-[100%] h-[20px] desktop:m-2 desktop:ml-10 
                       ${
                         project.project_name === 'NC News API' && 'bg-gray-300'
                       }`}
                     />
-                    <span className="ml-3">{project.tech_stack[index]}</span>
+                    <span
+                      className="ml-3"
+                      style={{
+                        fontFamily: 'rato',
+                        fontSize: isDesktop ? '1.5rem' : '0.5rem',
+                      }}
+                    >
+                      {project.tech_stack[index]}
+                    </span>
                   </div>
                 ))}
               </section>
