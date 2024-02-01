@@ -15,6 +15,8 @@ export const funFactsAboutMe: string[] = [
 
 export const languagesArray: string[] = ['javascript', 'typescript'];
 
+export const languagesArrayIcon: string[] = [vueSVG, jsSVG, bootstrapSVG];
+
 export const frameworksArray: string[] = [
   'react',
   'reactnative',

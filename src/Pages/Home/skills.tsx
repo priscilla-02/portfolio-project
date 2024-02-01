@@ -1,5 +1,5 @@
 import { useTheme } from '../../Hooks/themeHook';
-import { frameworksArray } from '../../Constants';
+import { frameworksArray, languagesArrayIcon } from '../../Constants';
 import javascriptIcon from '/assets/images/skills/languages/javascript.svg';
 import typescriptIcon from '/assets/images/skills/languages/typescript.svg';
 
@@ -38,27 +38,43 @@ export function Skills() {
               className="w-[50px] h-[50px] desktop:w-[120px] desktop:h-[120px] m-2"
             />
           ))} */}
+          {/* {Test production env} */}
           <div>
             <div className="flex-col">
-              <p>import icons</p>
-              <img
-                className="desktop:w-[120px] desktop:h-[120px] m-2"
-                src={javascriptIcon}
-                alt="javascriptIcon"
-              />
-              <img
-                className="desktop:w-[120px] desktop:h-[120px] m-2"
-                src={typescriptIcon}
-                alt="typescriptIcon"
-              />
+              <div className="flex">
+                <p>map</p>
+                {languagesArrayIcon.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Tech Stack Image ${index}`}
+                    className="w-[50px] h-[50px] desktop:w-[120px] desktop:h-[120px] m-2"
+                  />
+                ))}
+              </div>
+              <div className="flex">
+                <p>import icons</p>
+                <img
+                  className="desktop:w-[120px] desktop:h-[120px] m-2"
+                  src={javascriptIcon}
+                  alt="javascriptIcon"
+                />
+                <img
+                  className="desktop:w-[120px] desktop:h-[120px] m-2"
+                  src={typescriptIcon}
+                  alt="typescriptIcon"
+                />
+              </div>
             </div>
             <div>
-              <p>test</p>
-              <img
-                className="desktop:w-[120px] desktop:h-[120px] m-2"
-                src="https://skillicons.dev/icons?i=js,ts"
-                alt="languages icon url"
-              />
+              <div className="flex">
+                <p>test</p>
+                <img
+                  className="desktop:w-[120px] desktop:h-[120px] m-2"
+                  src="https://skillicons.dev/icons?i=js,ts"
+                  alt="languages icon url"
+                />
+              </div>
             </div>
           </div>
         </div>
