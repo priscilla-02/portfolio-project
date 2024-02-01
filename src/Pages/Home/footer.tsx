@@ -1,4 +1,4 @@
-import topArrowIcon from '../../../public/assets/icons/arrow.svg';
+import topArrowIcon from '/assets/icons/arrow.svg';
 
 export function Footer() {
   const scrollToTop = () => {
