@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTheme } from '../../Hooks/themeHook';
 import codingGIF from '../../../public/assets/images/aboutme/coding-gif';
-import codingImg from '../../../public/assets/images/aboutme/coding-image.png';
+import codingImg from '/assets/images/aboutme/coding-image.png';
 import { funFactsAboutMe } from '../../Constants';
 
 import rightArrowIcon from '../../../public/assets/icons/right-arrow.svg';

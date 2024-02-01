@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { DarkModeToggle } from './darkmode';
 import { useTheme } from '../../Hooks/themeHook';
-import menuIcon from '../../../public/assets/icons/menu.svg';
-import homeOutlineIcon from '../../../public/assets/icons/home-outline.svg';
-import homeSolidIcon from '../../../public/assets/icons/home-solid.svg';
-import projectOutlineIcon from '../../../public/assets/icons/projects-outline.svg';
-import projectSolidIcon from '../../../public/assets/icons/projects-solid.svg';
-import connectOutlineIcon from '../../../public/assets/icons/connect-outline.svg';
-import connectSolidIcon from '../../../public/assets/icons/connect-solid.svg';
+import menuIcon from '/assets/icons/menu.svg';
+import homeOutlineIcon from '/assets/icons/home-outline.svg';
+import homeSolidIcon from '/assets/icons/home-solid.svg';
+import projectOutlineIcon from '/assets/icons/projects-outline.svg';
+import projectSolidIcon from '/assets/icons/projects-solid.svg';
+import connectOutlineIcon from '/assets/icons/connect-outline.svg';
+import connectSolidIcon from '/assets/icons/connect-solid.svg';
 
 export default function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState<boolean>(false);
