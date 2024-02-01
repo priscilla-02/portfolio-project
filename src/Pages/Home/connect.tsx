@@ -48,7 +48,7 @@ export function Connect() {
           >
             <a href="https://github.com/priscilla-02" target="_blank">
               <div
-                className={`rounded-full border-2 border-gray-700 p-3.5 ${
+                className={`rounded-full border-2 border-black p-3.5 ${
                   isHovered === 'github'
                     ? 'ring-inset ring-[6px] ring-blue-400'
                     : ''
@@ -75,7 +75,7 @@ export function Connect() {
               target="_blank"
             >
               <div
-                className={`rounded-full border-2 border-gray-700 p-2 ${
+                className={`rounded-full border-2 border-black p-2 ${
                   isHovered === 'linkedin'
                     ? 'ring-inset ring-[6px] ring-blue-400'
                     : ''
@@ -100,7 +100,7 @@ export function Connect() {
           >
             <a href="mailto:priscilla.chankwaitung@gmail.com" target="_blank">
               <div
-                className={`rounded-full border-2 border-gray-700 p-2 ${
+                className={`rounded-full border-2 border-black p-2 ${
                   isHovered === 'email'
                     ? 'ring-inset ring-[6px] ring-blue-400'
                     : ''

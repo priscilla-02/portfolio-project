@@ -58,7 +58,7 @@ export function Projects() {
                 isHovered === project.project_name
                   ? project.project_name === 'SquareUp'
                     ? 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[55%] h-[45%] backdrop-blur-xl'
-                    : 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[50%] h-[60%] backdrop-blur-xl'
+                    : 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[60%] h-[70%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'
               }`}
             >
@@ -76,12 +76,12 @@ export function Projects() {
                 <div
                   className="underline"
                   style={{
-                    fontSize: isDesktop ? '1.5rem' : '0.5rem',
+                    fontSize: isDesktop ? '1.5rem' : '0.7rem',
                   }}
                 >
                   {project.project_name}
                 </div>
-                <div style={{ fontSize: isDesktop ? '1.5rem' : '0.5rem' }}>
+                <div style={{ fontSize: isDesktop ? '1.5rem' : '0.7rem' }}>
                   {project.description}
                 </div>
 
@@ -234,8 +234,8 @@ export function Projects() {
               } ${
                 isHovered === project.project_name
                   ? project.project_name === 'SquareUp'
-                    ? 'opacity-80 desktop:w-[0%] desktop:h-[50%] w-[40%] h-[30%] backdrop-blur-xl'
-                    : 'opacity-80 w-[30%] h-[50%] backdrop-blur-xl'
+                    ? 'opacity-80 desktop:w-[25%] desktop:h-[50%] w-[40%] h-[30%] backdrop-blur-xl'
+                    : 'opacity-80 w-[30%] h-[55%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'
               }`}
             >
