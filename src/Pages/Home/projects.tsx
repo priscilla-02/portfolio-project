@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useTheme } from '../../Hooks/themeHook';
 import { projectsArray } from '../../Constants';
 import { formatTechName } from '../../Utils/formatTechName';
-import testImg from '../../../public/assets/images/projects/testing.jpeg';
 
 export function Projects() {
   const [isHovered, setIsHovered] = useState<null | string>(null);

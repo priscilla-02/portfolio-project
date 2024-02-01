@@ -1,7 +1,7 @@
-import comingUpImage from '../../public/assets/images/projects/Coming Up.png';
-import sqaureupImage from '../../public/assets/images/projects/SquareUp.png';
-import ncNewsImage from '../../public/assets/images/projects/NC News.png';
-import ncNewsApiImage from '../../public/assets/images/projects/NC News API.png';
+import comingUpImage from '/assets/images/projects/Coming Up.png';
+import sqaureupImage from '/assets/images/projects/SquareUp.png';
+import ncNewsImage from '/assets/images/projects/NC News.png';
+import ncNewsApiImage from '/assets/images/projects/NC News API.png';
 
 export const funFactsAboutMe: string[] = [
   '⭐ I am trilingual excluding programming langauages',
