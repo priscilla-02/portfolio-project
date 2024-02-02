@@ -58,7 +58,7 @@ export function Projects() {
                 isHovered === project.project_name
                   ? project.project_name === 'SquareUp'
                     ? 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[55%] h-[45%] backdrop-blur-xl'
-                    : 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[60%] h-[70%] backdrop-blur-xl'
+                    : 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[60%] h-[90%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'
               }`}
             >
@@ -84,7 +84,6 @@ export function Projects() {
                 <div style={{ fontSize: isDesktop ? '1.5rem' : '0.7rem' }}>
                   {project.description}
                 </div>
-
                 <div className="flex desktop:mt-5 mt-2">
                   {project.project_name === 'Coming Up' ? (
                     <p
@@ -132,7 +131,6 @@ export function Projects() {
                           </div>
                         </a>
                       </div>
-
                       {project.project_name !== 'NC News API' && (
                         <div>
                           <a
@@ -175,7 +173,6 @@ export function Projects() {
                 </div>
               </section>
             </div>
-
             {/* bottom-text-box */}
             {/* <div
               className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out desktop:text-xl text-sm ${
@@ -227,40 +224,33 @@ export function Projects() {
                 ))}
               </section>
             </div> */}
-
             {/* Bottom-text-top: Test production env */}
             <div
               className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out
               } ${
                 isHovered === project.project_name
                   ? project.project_name === 'SquareUp'
-                    ? 'opacity-80 desktop:w-[25%] desktop:h-[50%] w-[40%] h-[30%] backdrop-blur-xl'
-                    : 'opacity-80 w-[30%] h-[55%] backdrop-blur-xl'
+                    ? 'opacity-80 desktop:w-[30%] desktop:h-[50%] w-[40%] h-[30%] backdrop-blur-xl'
+                    : 'opacity-80 w-[35%] h-[55%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'
               }`}
             >
               <section
-                className={`flex flex-col align-center items-center desktop:p-20 desktop:mr-20 ${
+                className={`w-full flex flex-col align-center items-center desktop:p-20 desktop:mr-20 ${
                   project.project_name === 'Coming Up'
                     ? 'text-black'
                     : 'text-white'
                 }`}
               >
                 {project.tech_stack_image.map((image, index) => (
-                  <div key={index} className="flex items-center my-2">
-                    {/* <img
-                      src={image}
-                      alt={image}
-                      className={`flex desktop:w-[60px] desktop:h-[60px] w-[100%] h-[20px] desktop:m-2 desktop:ml-10 
-                      ${
-                        project.project_name === 'NC News API' && 'bg-gray-300'
-                      }`}
-                    /> */}
-
+                  <div
+                    key={index}
+                    className="w-full flex items-center my-2 pl-4"
+                  >
                     <img
                       src={image}
                       alt={image}
-                      className={`flex desktop:w-[60px] desktop:h-[60px] w-[100%] h-[20px] desktop:m-2 desktop:ml-10 
+                      className={`flex desktop:w-[60px] desktop:h-[60px] h-[20px] w-[7vw] desktop:m-2 desktop:ml-10 
                       ${
                         project.project_name === 'NC News API' && 'bg-gray-300'
                       }`}
@@ -278,7 +268,6 @@ export function Projects() {
                 ))}
               </section>
             </div>
-
             {/* //// */}
           </div>
         ))}
