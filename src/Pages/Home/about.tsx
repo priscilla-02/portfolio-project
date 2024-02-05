@@ -24,7 +24,7 @@ export function AboutMe() {
       <div className="flex flex-col desktop:flex-row justify-center align-center items-center">
         <div className="desktop:max-w-[60vw] max-w-[80vw]">
           <header
-            className="mask text-gradient desktop:text-8xl text-7xl font-bold pb-10"
+            className="mask text-gradient desktop:text-9xl text-7xl font-bold pb-10"
             style={{
               fontFamily: 'OliverKitchen',
             }}

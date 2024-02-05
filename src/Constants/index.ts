@@ -11,7 +11,7 @@ import htmlSVG from '/assets/images/skills/frameworks/html.svg';
 import cssSVG from '/assets/images/skills/frameworks/css.svg';
 import tailwindSVG from '/assets/images/skills/frameworks/tailwind.svg';
 import bootstrapSVG from '/assets/images/skills/frameworks/bootstrap.svg';
-import firebaseSVG from '../../public/assets/images/skills/frameworks/firebase.svg';
+import firebaseSVG from '/assets/images/skills/frameworks/firebase.svg';
 import nodeSVG from '/assets/images/skills/frameworks/node.svg';
 import expressSVG from '/assets/images/skills/frameworks/express.svg';
 import postgressqlSVG from '/assets/images/skills/frameworks/postgresql.svg';
