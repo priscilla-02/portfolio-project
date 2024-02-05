@@ -79,28 +79,8 @@ img {
 }
 
 @font-face {
-  font-family: 'SimpleNight';
-  src: url('/src/font/Simple Night.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'EasyMind';
-  src: url('/src/font/EasyMind-6Y0dq.otf') format('truetype');
-}
-
-@font-face {
   font-family: 'OliverKitchen';
   src: url('/src/font/OliverKitchen.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'QuickSand';
-  src: url('/src/font/Quicksand_Book_Oblique.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'DancingScript';
-  src: url('/src/font/DancingScript-Regular.ttf') format('truetype');
 }
 
 @font-face {

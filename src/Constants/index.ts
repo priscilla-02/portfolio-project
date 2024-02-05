@@ -25,24 +25,7 @@ export const funFactsAboutMe: string[] = [
   '🎮 Conquering the culinary chaos of "Overcooked"',
 ];
 
-export const languagesArray: string[] = ['javascript', 'typescript'];
-
 export const languagesIconArray: string[] = [jsSVG, tsSVG];
-
-export const frameworksArray: string[] = [
-  'react',
-  'reactnative',
-  'vue',
-  'html',
-  'css',
-  'tailwind',
-  'bootstrap',
-  'node',
-  'express',
-  'firebase',
-  'postgresql',
-  'postman',
-];
 
 export const frameworksArrayIcon: string[] = [
   reactSVG,

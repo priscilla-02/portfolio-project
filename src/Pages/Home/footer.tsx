@@ -9,14 +9,14 @@ export function Footer() {
   };
 
   return (
-    <footer className="flex h-auto p-10 bg-slate-600 justify-center align-center items-center desktop:text-xl text-sm">
-      <div
-        className="flex ml-auto"
-        style={{
-          fontFamily: 'rato',
-        }}
-      >
-        <div>
+    <footer className="flex h-auto p-10 bg-slate-600 justify-center align-center items-center">
+      <div className="flex ml-auto">
+        <div
+          className=" desktop:text-2xl text-sm"
+          style={{
+            fontFamily: 'rato',
+          }}
+        >
           <p>© 2024 Priscilla Chan.</p>
           <p>All Rights Reserved.</p>
         </div>
@@ -26,7 +26,7 @@ export function Footer() {
         <img
           src={topArrowIcon}
           alt="Top Arrow Icon"
-          className="border-solid border-black border-2 rounded-full desktop:w-13 desktop:h-13 w-9 h-9 p-1"
+          className="border-solid border-black border-2 rounded-full desktop:w-16 desktop:h-16 w-9 h-9 p-1"
         />
       </button>
     </footer>
