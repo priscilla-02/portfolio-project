@@ -19,13 +19,13 @@ export function Connect() {
   return (
     <div
       id="connect"
-      className={`flex justify-center items-center font-extrabold h-[500px] px-10 ${
+      className={`flex justify-center items-center font-extrabold h-[500px] ${
         isDarkMode ? 'bg-slate-500' : 'bg-white'
       }`}
     >
       <div className="flex-col">
         <p
-          className="mb-5 text-2xl"
+          className="mb-10 desktop:text-4xl text-2xl"
           style={{
             fontFamily: 'rato',
           }}
@@ -54,7 +54,7 @@ export function Connect() {
                     : ''
                 }`}
               >
-                <GitHubIcon style={{ fontSize: 25 }} />
+                <GitHubIcon style={{ fontSize: 30 }} />
               </div>
             </a>
           </div>
@@ -81,7 +81,7 @@ export function Connect() {
                     : ''
                 }`}
               >
-                <LinkedInIcon style={{ fontSize: 35 }} />
+                <LinkedInIcon style={{ fontSize: 40 }} />
               </div>
             </a>
           </div>
@@ -106,7 +106,7 @@ export function Connect() {
                     : ''
                 }`}
               >
-                <EmailIcon style={{ fontSize: 35 }} />
+                <EmailIcon style={{ fontSize: 40 }} />
               </div>
             </a>
           </div>

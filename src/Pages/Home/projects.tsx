@@ -19,7 +19,8 @@ export function Projects() {
   return (
     <div
       id="projects"
-      className={`pt-10 ${isDarkMode ? 'bg-slate-500' : 'bg-white'}`}
+      className={`pt-10
+       ${isDarkMode ? 'bg-slate-500' : 'bg-white'}`}
     >
       <section
         className="flex justify-center text-4xl"

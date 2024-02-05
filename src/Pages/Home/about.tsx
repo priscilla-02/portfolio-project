@@ -3,8 +3,7 @@ import { useTheme } from '../../Hooks/themeHook';
 import codingGIF from '../../../public/assets/images/aboutme/coding-gif';
 import codingImg from '/assets/images/aboutme/coding-image.png';
 import { funFactsAboutMe } from '../../Constants';
-
-import rightArrowIcon from '../../../public/assets/icons/right-arrow.svg';
+import rightArrowIcon from '/assets/icons/right-arrow.svg';
 
 export function AboutMe() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -18,66 +17,58 @@ export function AboutMe() {
 
   return (
     <div
-      className={`flex-row justify-center text-center p-10 desktop:w-auto w-screen ${
+      className={`flex-row justify-center text-center desktop:p-36 desktop:w-auto w-screen ${
         isDarkMode ? 'bg-slate-500' : 'bg-white'
       }`}
     >
       <div className="flex flex-col desktop:flex-row justify-center align-center items-center">
         <div className="desktop:max-w-[60vw] max-w-[80vw]">
-          {/* <header
-            className="mask text-7xl font-bold pb-5 px-10"
-            style={{
-              fontFamily: 'quicksand',
-            }}
-          >
-            PRISCILLA CHAN
-          </header>
-
           <header
-            className="mask text-6xl font-bold pb-5 px-10"
-            style={{
-              fontFamily: 'rato',
-            }}
-          >
-            PRISCILLA CHAN
-          </header> */}
-
-          <header
-            className="mask text-gradient desktop:text-8xl text-7xl font-bold pb-5"
+            className="mask text-gradient desktop:text-8xl text-7xl font-bold pb-10"
             style={{
               fontFamily: 'OliverKitchen',
             }}
           >
             PRISCILLA CHAN
           </header>
-
           <div
-            className="text-xl"
-            style={{
-              fontFamily: 'quickSand',
-            }}
-          >
-            [quickSand] Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </div>
-          <div
-            className="text-xl"
+            className="desktop:text-3xl text-xl desktop:py-10 desktop:pb-5 pb-16"
             style={{
               fontFamily: 'rato',
             }}
           >
-            [rato] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Hey there! I made the jump from a non-tech background to software
+            development. While I've built full-stack projects, my primary
+            passion lies in creating immersive front-end experiences.
+          </div>
+          <div className="desktop:m-20 desktop:visible">
+            <a
+              href="#techStack"
+              className="text-2xl bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-4 px-10 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-12 desktop:visible invisible"
+              style={{
+                fontFamily: 'rato',
+              }}
+            >
+              Tech Stack
+            </a>
+            <a
+              href="#projects"
+              className="text-2xl bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-4 px-8 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-12 desktop:visible invisible"
+              style={{
+                fontFamily: 'rato',
+              }}
+            >
+              Projects
+            </a>
+            <a
+              href="#connect"
+              className="text-2xl bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-4 px-10 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-12 desktop:visible invisible"
+              style={{
+                fontFamily: 'rato',
+              }}
+            >
+              Connect
+            </a>
           </div>
         </div>
 
@@ -125,32 +116,6 @@ export function AboutMe() {
             <img src={rightArrowIcon} className="w-6 h-6" />
           </div>
         </section>
-      </div>
-
-      {/* Links */}
-      <div className="m-20 desktop:visible">
-        <a
-          href="#projects"
-          className=" bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-4 px-6 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-5 desktop:visible invisible"
-          style={{
-            fontFamily: 'rato',
-            fontWeight: '100',
-            fontSize: '20px',
-          }}
-        >
-          Projects
-        </a>
-        <a
-          href="#skills"
-          className="bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-4 px-8 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-5 desktop:visible invisible"
-          style={{
-            fontFamily: 'rato',
-            fontWeight: '100',
-            fontSize: '20px',
-          }}
-        >
-          Skills
-        </a>
       </div>
     </div>
   );

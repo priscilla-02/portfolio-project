@@ -4,6 +4,8 @@ import { useTheme } from '../../Hooks/themeHook';
 import menuIcon from '/assets/icons/menu.svg';
 import homeOutlineIcon from '/assets/icons/home-outline.svg';
 import homeSolidIcon from '/assets/icons/home-solid.svg';
+import techStackSolidIcon from '/assets/icons/tech-stack-solid.svg';
+import techStackOutlineIcon from '/assets/icons/tech-stack-outline.svg';
 import projectOutlineIcon from '/assets/icons/projects-outline.svg';
 import projectSolidIcon from '/assets/icons/projects-solid.svg';
 import connectOutlineIcon from '/assets/icons/connect-outline.svg';
@@ -12,8 +14,10 @@ import connectSolidIcon from '/assets/icons/connect-solid.svg';
 export default function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState<boolean>(false);
   const [isHomeHovered, setIsHomeHovered] = useState<boolean>(false);
+  const [isTechStackHovered, setIsTechStackHovered] = useState<boolean>(false);
   const [isProjectsHovered, setIsProjectsHovered] = useState<boolean>(false);
   const [isConnectHovered, setIsConnectHovered] = useState<boolean>(false);
+
   const { toggleDarkMode, isDarkMode } = useTheme();
 
   return (
@@ -75,6 +79,33 @@ export default function Navbar() {
               }}
             >
               Home
+            </a>
+          </div>
+          <div className="flex justify-center items-center align-center">
+            <img
+              src={
+                isTechStackHovered ? techStackSolidIcon : techStackOutlineIcon
+              }
+              className="w-12 h-12"
+              alt="Tech Stack Icon"
+            />
+            <a
+              href="#techStack"
+              className={`w-full text-center text-3xl ${
+                expandNavbar ? 'w-full text-center m-8' : 'hidden'
+              }`}
+              onMouseEnter={() => setIsTechStackHovered(true)}
+              onMouseLeave={() => setIsTechStackHovered(false)}
+              onTouchStart={() => setIsTechStackHovered(true)}
+              onTouchEnd={() => setIsTechStackHovered(false)}
+              onClick={() => {
+                setExpandNavbar(false);
+              }}
+              style={{
+                fontFamily: 'rato',
+              }}
+            >
+              Tech Stack
             </a>
           </div>
           <div className="flex justify-center items-center align-center">
