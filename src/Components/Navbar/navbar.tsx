@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <div
       className={`h-auto pb-5 ${expandNavbar ? '' : ''} ${
-        isDarkMode ? 'bg-slate-500' : 'bg-white'
+        isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
       }`}
     >
       <div className="w-full h-24 flex items-center justify-between">

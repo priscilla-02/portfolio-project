@@ -7,7 +7,7 @@ export function Skills() {
   return (
     <div
       className={`pt-32 desktop:pb-56 pb-32 ${
-        isDarkMode ? 'bg-slate-500' : 'bg-white'
+        isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
       }`}
     >
       <section

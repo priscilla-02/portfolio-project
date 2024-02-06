@@ -20,7 +20,7 @@ export function Connect() {
     <div
       id="connect"
       className={`flex justify-center items-center font-extrabold h-[500px] ${
-        isDarkMode ? 'bg-slate-500' : 'bg-white'
+        isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
       }`}
     >
       <div className="flex-col">

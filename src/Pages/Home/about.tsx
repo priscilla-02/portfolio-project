@@ -18,7 +18,7 @@ export function AboutMe() {
   return (
     <div
       className={`flex-row justify-center text-center desktop:p-36 desktop:w-auto w-screen ${
-        isDarkMode ? 'bg-slate-500' : 'bg-white'
+        isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
       }`}
     >
       <div className="flex flex-col desktop:flex-row justify-center align-center items-center desktop:pt-0 pt-16">

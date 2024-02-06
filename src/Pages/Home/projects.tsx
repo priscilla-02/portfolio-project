@@ -20,7 +20,7 @@ export function Projects() {
     <div
       id="projects"
       className={`pt-10
-       ${isDarkMode ? 'bg-slate-500' : 'bg-white'}`}
+       ${isDarkMode ? 'bg-slate-500' : 'bg-gray-300'}`}
     >
       <section
         className="flex justify-center text-4xl"
