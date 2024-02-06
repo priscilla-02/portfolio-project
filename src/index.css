@@ -49,7 +49,7 @@ body {
 }
 
 .mask {
-  background: url('../public/assets/images/aboutme/background.jpeg') 0 0 / cover
+  background: url('/assets/images/aboutme/background.jpeg') 0 0 / cover
     no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

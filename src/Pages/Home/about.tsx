@@ -21,10 +21,10 @@ export function AboutMe() {
         isDarkMode ? 'bg-slate-500' : 'bg-white'
       }`}
     >
-      <div className="flex flex-col desktop:flex-row justify-center align-center items-center">
-        <div className="desktop:max-w-[60vw] max-w-[80vw]">
+      <div className="flex flex-col desktop:flex-row justify-center align-center items-center desktop:pt-0 pt-16">
+        <div className="desktop:max-w-[40vw] max-w-[80vw]">
           <header
-            className="mask text-gradient desktop:text-9xl text-7xl font-bold pb-10"
+            className="mask text-gradient desktop:text-8xl text-7xl font-bold pb-10 "
             style={{
               fontFamily: 'OliverKitchen',
             }}
@@ -32,43 +32,47 @@ export function AboutMe() {
             PRISCILLA CHAN
           </header>
           <div
-            className="desktop:text-3xl text-xl desktop:py-10 desktop:pb-5 pb-16"
+            className="text-xl desktop:py-15 desktop:pb-6 desktop:m-5"
             style={{
               fontFamily: 'rato',
             }}
           >
-            Hey there! I made the jump from a non-tech background to software
-            development. While I've built full-stack projects, my primary
-            passion lies in creating immersive front-end experiences.
+            Hey there! I have transitioned from a non-tech background to become
+            a software developer. The journey has been challenging but exciting.
+            While I have built various full-stack projects, my true passion lies
+            in creating immersive front-end experiences.
           </div>
-          <div className="desktop:m-20 desktop:visible">
-            <a
-              href="#techStack"
-              className="text-2xl bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-4 px-10 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-12 desktop:visible invisible"
-              style={{
-                fontFamily: 'rato',
-              }}
-            >
-              Tech Stack
-            </a>
-            <a
-              href="#projects"
-              className="text-2xl bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-4 px-8 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-12 desktop:visible invisible"
-              style={{
-                fontFamily: 'rato',
-              }}
-            >
-              Projects
-            </a>
-            <a
-              href="#connect"
-              className="text-2xl bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-4 px-10 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-12 desktop:visible invisible"
-              style={{
-                fontFamily: 'rato',
-              }}
-            >
-              Connect
-            </a>
+          <div className="desktop:mt-5 desktop:visible invisible">
+            <div className="flex">
+              <a
+                href="#techStack"
+                className="flex items-center text-lg bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-2 px-6 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-8 desktop:visible invisible"
+                style={{
+                  fontFamily: 'rato',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                Tech Stack
+              </a>
+              <a
+                href="#projects"
+                className="flex items-center text-lg bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-2 px-6 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-8 desktop:visible invisible"
+                style={{
+                  fontFamily: 'rato',
+                }}
+              >
+                Projects
+              </a>
+              <a
+                href="#connect"
+                className="flex items-center text-lg bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-2 px-6 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-8 desktop:visible invisible"
+                style={{
+                  fontFamily: 'rato',
+                }}
+              >
+                Connect
+              </a>
+            </div>
           </div>
         </div>
 

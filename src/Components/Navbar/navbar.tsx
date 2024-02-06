@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`h-auto pb-20 ${expandNavbar ? '' : ''} ${
+      className={`h-auto pb-5 ${expandNavbar ? '' : ''} ${
         isDarkMode ? 'bg-slate-500' : 'bg-white'
       }`}
     >

@@ -22,7 +22,7 @@ export function Skills() {
 
       <section className="flex flex-col items-center justify-center p-10 text-3xl underline">
         <div
-          className="desktop:pt-20 pb-6"
+          className="desktop:pt-15 pb-3"
           style={{
             fontFamily: 'rato',
           }}
@@ -38,7 +38,7 @@ export function Skills() {
                     key={index}
                     src={image}
                     alt={`Tech Stack Image ${index}`}
-                    className="w-[50px] h-[50px] desktop:w-[120px] desktop:h-[120px] m-2"
+                    className="w-[50px] h-[50px] desktop:w-[100px] desktop:h-[100px] m-2"
                   />
                 ))}
               </div>
@@ -49,7 +49,7 @@ export function Skills() {
 
       <section className="flex flex-col items-center justify-center py-5 text-3xl underline">
         <div
-          className="desktop:pt-20 pb-10"
+          className="desktop:pt-15 pb-5"
           style={{
             fontFamily: 'rato',
           }}
@@ -62,7 +62,7 @@ export function Skills() {
               key={index}
               src={image}
               alt={`Tech Stack Image ${index}`}
-              className="w-[50px] h-[50px] desktop:w-[120px] desktop:h-[120px] desktop:m-2 m-3"
+              className="w-[50px] h-[50px] desktop:w-[100px] desktop:h-[100px] m-3"
             />
           ))}
         </div>

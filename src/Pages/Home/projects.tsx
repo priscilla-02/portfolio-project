@@ -64,7 +64,7 @@ export function Projects() {
                 className={`flex justify-center align-center items-center flex-col px-2
                  ${
                    project.project_name === 'Coming Up'
-                     ? 'text-black'
+                     ? 'text-sky-500'
                      : 'text-white'
                  }`}
                 style={{
@@ -85,7 +85,7 @@ export function Projects() {
                 <div className="flex desktop:mt-5 mt-2">
                   {project.project_name === 'Coming Up' ? (
                     <p
-                      className="bg-gray-500 text-white font-bold desktop:py-2 py-1 desktop:px-4 px-2 border-b-4 border-gray-600 rounded-full"
+                      className="bg-gray-500 text-sky-500 font-bold desktop:py-2 py-1 desktop:px-4 px-2 border-b-4 border-gray-600 rounded-full"
                       style={{
                         fontSize: isDesktop ? '1.5rem' : '0.5rem',
                       }}
