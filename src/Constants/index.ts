@@ -60,8 +60,8 @@ export const projectsArray: Project[] = [
       'A recipe finder application that provides a diverse range of culinary options, also allows user to customise recipe search with multiple filter options. From cuisine to dietary preferences, user can effortlessly find the perfect recipe to suit their taste.',
     tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
     tech_stack_image: [vueSVG, jsSVG, bootstrapSVG],
-    codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
-    projectURL: 'https://github.com/priscilla-02/nc-news',
+    codeURL: '',
+    projectURL: '',
     project_image: comingUpImage,
   },
   {
@@ -81,8 +81,8 @@ export const projectsArray: Project[] = [
       'A news application featuring current weather dashboard, sorting and ordering of articles by topic, author, popularity, etc., and user ability to select, sort, and order news articles for reading.',
     tech_stack: ['React', 'Javascript', 'Tailwind'],
     tech_stack_image: [reactSVG, jsSVG, tailwindSVG],
-    codeURL: 'https://nc-news-by-priscilla-c.netlify.app/',
-    projectURL: 'https://github.com/priscilla-02/nc-news',
+    codeURL: 'https://github.com/priscilla-02/nc-news',
+    projectURL: 'https://nc-news-by-priscilla-c.netlify.app/',
     project_image: ncNewsImage,
   },
   {
