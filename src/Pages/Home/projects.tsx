@@ -43,9 +43,11 @@ export function Projects() {
               src={project.project_image}
               className={`z-[-1] w-full h-full transition-all duration-1000 ease-in-out
               ${
-                project.project_name === 'SquareUp' &&
+                (project.project_name === 'SquareUp' ||
+                  project.project_name === 'Claim Application') &&
                 ' w-[50vw] max-h-[600px] object-contain'
               } 
+            
               ${isHovered === project.project_name ? 'blur-sm' : ''}`}
               alt={`${project.project_name} project`}
             />
@@ -63,7 +65,8 @@ export function Projects() {
               <section
                 className={`flex justify-center align-center items-center flex-col px-2
                  ${
-                   project.project_name === 'Coming Up'
+                   project.project_name === 'Coming Up' ||
+                   project.project_name === 'Claim Application'
                      ? 'text-sky-500'
                      : 'text-white'
                  }`}

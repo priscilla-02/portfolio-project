@@ -1,4 +1,5 @@
 import comingUpImage from '/assets/images/projects/Coming Up.png';
+import claimAppImage from '../../public/assets/images/projects/Claim Application.png';
 import sqaureupImage from '/assets/images/projects/SquareUp.png';
 import ncNewsImage from '/assets/images/projects/NC News.png';
 import ncNewsApiImage from '/assets/images/projects/NC News API.png';
@@ -17,6 +18,7 @@ import expressSVG from '/assets/images/skills/frameworks/express.svg';
 import postgressqlSVG from '/assets/images/skills/frameworks/postgresql.svg';
 import jestSVG from '/assets/images/skills/frameworks/jest.svg';
 import postmanSVG from '/assets/images/skills/frameworks/postman.svg';
+import styledComponentsSVG from '../../public/assets/icons/styled-components.svg';
 
 export const funFactsAboutMe: string[] = [
   '⭐ I am trilingual excluding programming langauages',
@@ -35,6 +37,7 @@ export const frameworksArrayIcon: string[] = [
   cssSVG,
   tailwindSVG,
   bootstrapSVG,
+  styledComponentsSVG,
   firebaseSVG,
   nodeSVG,
   expressSVG,
@@ -63,6 +66,16 @@ export const projectsArray: Project[] = [
     codeURL: '',
     projectURL: '',
     project_image: comingUpImage,
+  },
+  {
+    project_name: 'Claim Application',
+    description:
+      'This mobile screen (set to 600px) web application is a mock-up Claims Application that utilizes React for a seamless and responsive user interface, and Redux for efficient state management.',
+    tech_stack: ['React', 'Typescript', 'Styled Components'],
+    tech_stack_image: [reactSVG, tsSVG, styledComponentsSVG],
+    codeURL: 'https://github.com/priscilla-02/Claim-App',
+    projectURL: 'https://claim-application.netlify.app/',
+    project_image: claimAppImage,
   },
   {
     project_name: 'SquareUp',
