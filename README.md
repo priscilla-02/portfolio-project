@@ -1,4 +1,4 @@
-# Priscilla's Portfolio <img src="/public/assets/images/readme/portfolio.png" width="35" height="35" />
+# Priscilla's Portfolio <img src="/assets/images/readme/portfolio.png" width="35" height="35" />
 
 ## Welcome 👋
 

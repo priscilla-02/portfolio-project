@@ -18,7 +18,7 @@ import expressSVG from '/assets/images/skills/frameworks/express.svg';
 import postgressqlSVG from '/assets/images/skills/frameworks/postgresql.svg';
 import jestSVG from '/assets/images/skills/frameworks/jest.svg';
 import postmanSVG from '/assets/images/skills/frameworks/postman.svg';
-import styledComponentsSVG from '../../public/assets/icons/styled-components.svg';
+import styledComponentsSVG from '/assets/icons/styled-components.svg';
 
 export const funFactsAboutMe: string[] = [
   '⭐ I am trilingual excluding programming langauages',
