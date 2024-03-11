@@ -1,5 +1,5 @@
 import comingUpImage from '/assets/images/projects/Coming Up.png';
-import claimAppImage from '../../public/assets/images/projects/Claim Application.png';
+import claimAppImage from '/assets/images/projects/Claim Application.png';
 import sqaureupImage from '/assets/images/projects/SquareUp.png';
 import ncNewsImage from '/assets/images/projects/NC News.png';
 import ncNewsApiImage from '/assets/images/projects/NC News API.png';
