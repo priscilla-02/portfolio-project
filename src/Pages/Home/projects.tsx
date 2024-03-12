@@ -65,7 +65,7 @@ export function Projects() {
               <section
                 className={`flex justify-center align-center items-center flex-col px-2
                  ${
-                   project.project_name === 'Coming Up' ||
+                   project.project_name === 'Recipes Radar' ||
                    project.project_name === 'Claim Application'
                      ? 'text-sky-500'
                      : 'text-white'
@@ -85,21 +85,57 @@ export function Projects() {
                 <div style={{ fontSize: isDesktop ? '1.5rem' : '0.7rem' }}>
                   {project.description}
                 </div>
-                <div className="flex desktop:mt-5 mt-2">
-                  {project.project_name === 'Coming Up' ? (
-                    <p
-                      className="bg-gray-500 text-sky-500 font-bold desktop:py-2 py-1 desktop:px-4 px-2 border-b-4 border-gray-600 rounded-full"
-                      style={{
-                        fontSize: isDesktop ? '1.5rem' : '0.5rem',
-                      }}
-                    >
-                      Stay Tuned :)
-                    </p>
+                <div
+                  className="mt-2"
+                  style={{ fontSize: isDesktop ? '1.5rem' : '0.7rem' }}
+                >
+                  {project.project_name === 'Recipes Radar' ? (
+                    <p>'🚧 Working in Porgress 🚧</p>
                   ) : (
-                    <div className="flex">
+                    ''
+                  )}
+                </div>
+                <div className="flex desktop:mt-5 mt-2">
+                  <div className="flex">
+                    <div>
+                      <a
+                        href={project.codeURL}
+                        target="_blank"
+                        className="flex"
+                      >
+                        <div className="flex bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold desktop:py-2 py-1 desktop:px-4 px-1 border-b-4 border-blue-700 hover:border-blue-500 rounded-full mx-2">
+                          <svg
+                            className="desktop:w-7 desktop:h-7 w-3 h-3"
+                            viewBox="0 0 16 16"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
+                              clipRule="evenodd"
+                            />
+                            <path
+                              fillRule="evenodd"
+                              d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                          <div
+                            className="deesktop:mx-2 mx-1"
+                            style={{
+                              fontSize: isDesktop ? '1.2rem' : '0.5rem',
+                            }}
+                          >
+                            Code
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    {project.project_name !== 'NC News API' && (
                       <div>
                         <a
-                          href={project.codeURL}
+                          href={project.projectURL}
                           target="_blank"
                           className="flex"
                         >
@@ -127,50 +163,13 @@ export function Projects() {
                                 fontSize: isDesktop ? '1.2rem' : '0.5rem',
                               }}
                             >
-                              Code
+                              Project
                             </div>
                           </div>
                         </a>
                       </div>
-                      {project.project_name !== 'NC News API' && (
-                        <div>
-                          <a
-                            href={project.projectURL}
-                            target="_blank"
-                            className="flex"
-                          >
-                            <div className="flex bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold desktop:py-2 py-1 desktop:px-4 px-1 border-b-4 border-blue-700 hover:border-blue-500 rounded-full mx-2">
-                              <svg
-                                className="desktop:w-7 desktop:h-7 w-3 h-3"
-                                viewBox="0 0 16 16"
-                                fill="currentColor"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  fillRule="evenodd"
-                                  d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
-                                  clipRule="evenodd"
-                                />
-                                <path
-                                  fillRule="evenodd"
-                                  d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
-                                  clipRule="evenodd"
-                                />
-                              </svg>
-                              <div
-                                className="deesktop:mx-2 mx-1"
-                                style={{
-                                  fontSize: isDesktop ? '1.2rem' : '0.5rem',
-                                }}
-                              >
-                                Project
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      )}
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
               </section>
             </div>
@@ -185,13 +184,7 @@ export function Projects() {
                   : 'opacity-0 w-[10%] h-[10%]'
               }`}
             >
-              <section
-                className={`w-full flex flex-col align-center items-center desktop:p-20 desktop:mr-20 ${
-                  project.project_name === 'Coming Up'
-                    ? 'text-black'
-                    : 'text-white'
-                }`}
-              >
+              <section className="w-full flex flex-col align-center items-center desktop:p-20 desktop:mr-20 text-white">
                 {project.tech_stack_image.map((image, index) => (
                   <div
                     key={index}

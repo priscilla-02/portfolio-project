@@ -1,4 +1,4 @@
-import comingUpImage from '/assets/images/projects/Coming Up.png';
+import recipesRadarImage from '../../public/assets/images/projects/Recipes Radar.png';
 import claimAppImage from '/assets/images/projects/Claim Application.png';
 import sqaureupImage from '/assets/images/projects/SquareUp.png';
 import ncNewsImage from '/assets/images/projects/NC News.png';
@@ -58,16 +58,6 @@ interface Project {
 
 export const projectsArray: Project[] = [
   {
-    project_name: 'Coming Up',
-    description:
-      'A recipe finder application that provides a diverse range of culinary options, also allows user to customise recipe search with multiple filter options. From cuisine to dietary preferences, user can effortlessly find the perfect recipe to suit their taste.',
-    tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
-    tech_stack_image: [vueSVG, jsSVG, bootstrapSVG],
-    codeURL: '',
-    projectURL: '',
-    project_image: comingUpImage,
-  },
-  {
     project_name: 'Claim Application',
     description:
       'This mobile screen (set to 600px) web application is a mock-up Claims Application that utilizes React for a seamless and responsive user interface, and Redux for efficient state management.',
@@ -107,5 +97,15 @@ export const projectsArray: Project[] = [
     codeURL: 'https://github.com/priscilla-02/news-server',
     projectURL: '',
     project_image: ncNewsApiImage,
+  },
+  {
+    project_name: 'Recipes Radar',
+    description:
+      'A recipe finder application that provides a diverse range of culinary options. User can look up recipes by name and customise recipe search with multiple filter options from cuisine to dietary preferences. Each recipe includes details such as cooking time and instructions.',
+    tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
+    tech_stack_image: [vueSVG, jsSVG, bootstrapSVG],
+    codeURL: 'https://github.com/priscilla-02/Recipe-Radar',
+    projectURL: 'https://recipes-radar.netlify.app',
+    project_image: recipesRadarImage,
   },
 ];
