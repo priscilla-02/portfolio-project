@@ -1,4 +1,4 @@
-import recipesRadarImage from '../../public/assets/images/projects/Recipes Radar.png';
+import recipesRadarImage from '/assets/images/projects/Recipes Radar.png';
 import claimAppImage from '/assets/images/projects/Claim Application.png';
 import sqaureupImage from '/assets/images/projects/SquareUp.png';
 import ncNewsImage from '/assets/images/projects/NC News.png';
