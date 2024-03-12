@@ -90,7 +90,7 @@ export function Projects() {
                   style={{ fontSize: isDesktop ? '1.5rem' : '0.7rem' }}
                 >
                   {project.project_name === 'Recipes Radar' ? (
-                    <p>'🚧 Working in Porgress 🚧</p>
+                    <p>'🚧 Working in Porgress: Mobile Responsive</p>
                   ) : (
                     ''
                   )}

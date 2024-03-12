@@ -101,7 +101,7 @@ export const projectsArray: Project[] = [
   {
     project_name: 'Recipes Radar',
     description:
-      'A recipe finder application that provides a diverse range of culinary options. User can look up recipes by name and customise recipe search with multiple filter options from cuisine to dietary preferences. Each recipe includes details such as cooking time and instructions.',
+      'A recipe finder website application that provides a diverse range of culinary options. User can look up recipes by name and customise recipe search with multiple filter options from cuisine to dietary preferences. Each recipe includes details such as cooking time and instructions.',
     tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
     tech_stack_image: [vueSVG, jsSVG, bootstrapSVG],
     codeURL: 'https://github.com/priscilla-02/Recipe-Radar',
