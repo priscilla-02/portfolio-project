@@ -56,7 +56,8 @@ export function Projects() {
             <div
               className={`absolute flex flex-col items-center justify-center align-center z-2 top-0 left-0 bg-gray transition-all duration-1000 ease-in-out ${
                 isHovered === project.project_name
-                  ? project.project_name === 'SquareUp'
+                  ? project.project_name === 'Claim Application' ||
+                    project.project_name === 'SquareUp'
                     ? 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[55%] h-[45%] backdrop-blur-xl'
                     : 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[60%] h-[90%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'
@@ -87,10 +88,10 @@ export function Projects() {
                 </div>
                 <div
                   className="mt-2"
-                  style={{ fontSize: isDesktop ? '1.5rem' : '0.7rem' }}
+                  style={{ fontSize: isDesktop ? '1.2rem' : '0.6rem' }}
                 >
                   {project.project_name === 'Recipes Radar' ? (
-                    <p>'🚧 Working in Porgress: Mobile Responsive</p>
+                    <p>🚧 Working in Porgress: Mobile Responsive </p>
                   ) : (
                     ''
                   )}
@@ -178,7 +179,9 @@ export function Projects() {
               className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out
               } ${
                 isHovered === project.project_name
-                  ? project.project_name === 'SquareUp'
+                  ? project.project_name === 'Claim Application'
+                    ? 'opacity-80 desktop:w-[30%] desktop:h-[50%] w-[45%] h-[30%] backdrop-blur-xl'
+                    : project.project_name === 'SquareUo'
                     ? 'opacity-80 desktop:w-[30%] desktop:h-[50%] w-[40%] h-[30%] backdrop-blur-xl'
                     : 'opacity-80 w-[35%] h-[55%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'

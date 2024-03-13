@@ -60,7 +60,7 @@ export const projectsArray: Project[] = [
   {
     project_name: 'Claim Application',
     description:
-      'This mobile screen (set to 600px) web application is a mock-up Claims Application that utilizes React for a seamless and responsive user interface, and Redux for efficient state management.',
+      'This mobile screen (set to 600px) web application is a mock-up Plevin Claims Application that utilizes React for a seamless and responsive user interface, and Redux for efficient state management.',
     tech_stack: ['React', 'Typescript', 'Styled Components'],
     tech_stack_image: [reactSVG, tsSVG, styledComponentsSVG],
     codeURL: 'https://github.com/priscilla-02/Claim-App',
@@ -101,7 +101,7 @@ export const projectsArray: Project[] = [
   {
     project_name: 'Recipes Radar',
     description:
-      'A recipe finder website application that provides a diverse range of culinary options. User can look up recipes by name and customise recipe search with multiple filter options from cuisine to dietary preferences. Each recipe includes details such as cooking time and instructions.',
+      'A recipe finder website application where user can look up recipes by name and customise recipe search with multiple filter options from cuisine to dietary preferences. Each recipe includes details such as instructions.',
     tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
     tech_stack_image: [vueSVG, jsSVG, bootstrapSVG],
     codeURL: 'https://github.com/priscilla-02/Recipe-Radar',
