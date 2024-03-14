@@ -32,8 +32,9 @@ export function Projects() {
       </section>
       <div className="relative cursor-zoom-in flex-col justify-center items-center align-center flex desktop:m-0 p-4">
         <div></div>
-        {projectsArray.map(project => (
+        {projectsArray.map((project, index) => (
           <div
+            key={index}
             className="container m-16"
             onMouseOver={() => handleProjectEnter(project.project_name)}
             onMouseLeave={() => handleProjectLeave()}
