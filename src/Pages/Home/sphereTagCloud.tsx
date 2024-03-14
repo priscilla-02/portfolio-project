@@ -7,16 +7,14 @@ const SphereTagCloud: React.FC = () => {
     const isMobile = window.innerWidth <= 768;
     const radius = isMobile ? 150 : 250;
 
-    return () => {
-      const container: string = '.tagcloud';
-      const options: any = {
-        radius: radius,
-        maxSpeed: 'normal',
-        initSpeed: 'normal',
-        keep: true,
-      };
-      TagCloud(container, techStackArray, options);
+    const container: string = '.tagcloud';
+    const options: any = {
+      radius: radius,
+      maxSpeed: 'normal',
+      initSpeed: 'normal',
+      keep: true,
     };
+    TagCloud(container, techStackArray, options);
   }, []);
 
   return (
