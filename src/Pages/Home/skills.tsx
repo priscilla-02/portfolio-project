@@ -1,5 +1,6 @@
 import { useTheme } from '../../Hooks/themeHook';
 import { frameworksArrayIcon, languagesIconArray } from '../../Constants';
+import SphereTagCloud from './sphereTagCloud';
 
 export function Skills() {
   const { isDarkMode } = useTheme();
@@ -10,63 +11,71 @@ export function Skills() {
         isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
       }`}
     >
-      <section
-        id="techStack"
-        className="pt-10 text-center text-4xl"
-        style={{
-          fontFamily: 'rato',
-        }}
-      >
-        Tech Stack
-      </section>
-
-      <section className="flex flex-col items-center justify-center p-10 text-3xl underline">
+      <div className="flex justify-center items-center desktop:pb-10">
         <div
-          className="desktop:pt-15 pb-3"
+          id="techStack"
+          className="pt-10 text-center text-4xl"
           style={{
             fontFamily: 'rato',
           }}
         >
-          Languages
+          Tech Stack
         </div>
-        <div className="flex pr-2">
-          <div>
-            <div className="flex-col">
-              <div className="flex">
-                {languagesIconArray.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`Tech Stack Image ${index}`}
-                    className="w-[50px] h-[50px] desktop:w-[100px] desktop:h-[100px] m-2"
-                  />
-                ))}
+      </div>
+
+      <div className="flex flex-col desktop:flex-row desktop:pr-32">
+        <SphereTagCloud />
+
+        <div className="flex flex-col items-center justify-center ">
+          <section className="flex flex-col items-center justify-center p-10 text-3xl underline">
+            <div
+              className="desktop:pt-15 pb-3"
+              style={{
+                fontFamily: 'rato',
+              }}
+            >
+              Languages
+            </div>
+            <div className="flex pr-2">
+              <div>
+                <div className="flex-col">
+                  <div className="flex">
+                    {languagesIconArray.map((image, index) => (
+                      <img
+                        key={index}
+                        src={image}
+                        alt={`Tech Stack Image ${index}`}
+                        className="w-[50px] h-[50px] desktop:w-[80px] desktop:h-[80px] m-2"
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <section className="flex flex-col items-center justify-center py-5 text-3xl underline">
-        <div
-          className="desktop:pt-15 pb-5"
-          style={{
-            fontFamily: 'rato',
-          }}
-        >
-          Frameworks & Libraries
+          <section className="flex flex-col items-center justify-center py-5 text-3xl underline">
+            <div
+              className="desktop:pt-15 pb-5"
+              style={{
+                fontFamily: 'rato',
+              }}
+            >
+              Frameworks & Libraries
+            </div>
+            <div className="desktop:w-auto w-full flex flex-wrap pr-2 desktop:max-w-[50vw] items-center justify-center">
+              {frameworksArrayIcon.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Tech Stack Image ${index}`}
+                  className="w-[50px] h-[50px] desktop:w-[80px] desktop:h-[80px] m-3"
+                />
+              ))}
+            </div>
+          </section>
         </div>
-        <div className="desktop:w-auto w-full flex flex-wrap pr-2 desktop:max-w-[50vw] items-center justify-center">
-          {frameworksArrayIcon.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Tech Stack Image ${index}`}
-              className="w-[50px] h-[50px] desktop:w-[100px] desktop:h-[100px] m-3"
-            />
-          ))}
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
