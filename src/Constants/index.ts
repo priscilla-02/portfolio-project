@@ -8,6 +8,7 @@ import marriageTaxImage from '/assets/images/projects/Marriage Tax.png';
 import jsSVG from '/assets/images/skills/languages/javascript.svg';
 import tsSVG from '/assets/images/skills/languages/typescript.svg';
 import reactSVG from '/assets/images/skills/frameworks/react.svg';
+import nextSVG from '../../public/assets/images/skills/frameworks/next.svg';
 import reactNativeSVG from '/assets/images/skills/frameworks/reactnative.svg';
 import vueSVG from '/assets/images/skills/frameworks/vue.svg';
 import htmlSVG from '/assets/images/skills/frameworks/html.svg';
@@ -35,9 +36,11 @@ export const techStackArray: string[] = [
   'JavaScript',
   'Typescript',
   'React',
+  'Next.js',
   'React Native',
   'Vue',
   'Tailwind',
+  'Styled Components',
   'Bootstrap',
   'Firebase',
   'Firestore',
@@ -47,13 +50,14 @@ export const techStackArray: string[] = [
   'Jest',
   'SuperTest',
   'Postman',
-  'GITHUB',
+  'Github',
 ];
 
 export const languagesIconArray: string[] = [jsSVG, tsSVG];
 
 export const frameworksArrayIcon: string[] = [
   reactSVG,
+  nextSVG,
   reactNativeSVG,
   vueSVG,
   htmlSVG,
