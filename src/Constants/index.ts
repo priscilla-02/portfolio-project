@@ -86,7 +86,7 @@ export const projectsArray: Project[] = [
   {
     project_name: 'Claim4Tenants',
     description:
-      "Has your home fallen into disrepair? If you've been neglected by your landlord, you could potentially claim back thousands in compensation.",
+      "Has your home fallen into disrepair? If you've been neglected by your landlord, you could potentially claim back thousands in compensation. Start your no-win, no-fee housing disrepair claim now!",
     tech_stack: ['React', 'Typescript', 'Styled Components'],
     tech_stack_image: [reactSVG, tsSVG, styledComponentsSVG],
     projectURL: 'https://claim4tenants.co.uk/',
@@ -95,7 +95,7 @@ export const projectsArray: Project[] = [
   {
     project_name: 'Marriage Tax',
     description:
-      'Easy online application for marriage tax. Are you in a married couple or civil partnership? If so, you and your partner could benefit from this game-changing, money-saving tax break. Complete a no-win, no-fee online check to see if you could be owed up to £1,260 today!',
+      'Are you in a married couple or civil partnership? If so, you and your partner could benefit from this game-changing, money-saving tax break. Complete a no-win, no-fee online check to see if you could be owed up to £1,260 today!',
     tech_stack: ['React', 'Typescript', 'Styled Components'],
     tech_stack_image: [reactSVG, tsSVG, styledComponentsSVG],
     projectURL: ' https://staging-marriage.claimsfamily.co.uk/',
@@ -104,7 +104,7 @@ export const projectsArray: Project[] = [
   {
     project_name: 'Claim Application',
     description:
-      'This mobile screen (set to 600px) web application is a mock-up Plevin Claims Application that utilizes React for a seamless and responsive user interface, and Redux for efficient state management.',
+      'This mobile screen (set to 600px) web application is a Plevin Claims Application that utilizes React for a seamless and responsive user interface, and Redux for efficient state management.',
     tech_stack: ['React', 'Typescript', 'Styled Components'],
     tech_stack_image: [reactSVG, tsSVG, styledComponentsSVG],
     projectURL: 'https://claim-application.netlify.app/',
@@ -141,7 +141,7 @@ export const projectsArray: Project[] = [
   {
     project_name: 'Recipes Radar',
     description:
-      'A recipe finder website application where user can look up recipes by name and customise recipe search with multiple filter options from cuisine to dietary preferences. Each recipe includes details such as instructions.',
+      'A recipe finder website application where user can look up recipes by name, customise recipe search with multiple filter options from cuisine to dietary preferences. Each recipe includes details such as instructions.',
     tech_stack: ['Vue', 'Javascript', 'Bootstrap'],
     tech_stack_image: [vueSVG, jsSVG, bootstrapSVG],
     projectURL: 'https://recipes-radar.netlify.app',

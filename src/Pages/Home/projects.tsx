@@ -84,7 +84,7 @@ export function Projects() {
                 >
                   {project.project_name}
                 </div>
-                <div style={{ fontSize: isDesktop ? '1.5rem' : '0.7rem' }}>
+                <div style={{ fontSize: isDesktop ? '1.2rem' : '0.7rem' }}>
                   {project.description}
                 </div>
                 <div
@@ -202,7 +202,7 @@ export function Projects() {
                     <img
                       src={image}
                       alt={image}
-                      className={`flex desktop:w-[60px] desktop:h-[60px] h-[20px] w-[7vw] desktop:m-2 desktop:ml-10 
+                      className={`flex desktop:w-[60px] desktop:h-[60px] h-[20px] desktop:m-2 desktop:ml-10 
                       ${
                         project.project_name === 'NC News API' && 'bg-gray-300'
                       }`}
@@ -211,7 +211,8 @@ export function Projects() {
                       className="ml-3"
                       style={{
                         fontFamily: 'rato',
-                        fontSize: isDesktop ? '1.5rem' : '0.5rem',
+                        fontSize: isDesktop ? '1.5rem' : '0.7rem',
+                        textAlign: 'left',
                       }}
                     >
                       {project.tech_stack[index]}
