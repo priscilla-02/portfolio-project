@@ -18,17 +18,18 @@ export const Loading: React.FC<LoadingProps> = ({ setIsLoading }) => {
     navigate("/");
   };
 
-  return (<div className="h-[800px] flex flex-col gap-8 items-center justify-center">
+  return (<div className="h-[1200px] flex flex-col gap-10 items-center desktop:pt-40 pt-28">
     <div className="coffee">
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <div className="flex flex-col text-start mx-1 p-2 bg-gray-600">
+    <div className="flex flex-col text-start p-4 bg-gray-600">
       <h1 style={{
         whiteSpace: 'pre-line', color: '#c586c0',
-        fontSize: isTablet ? '1.5rem' : '0.6rem',
-      }} className={`${isDarkMode ? 'text- white' : 'text-black'} desktop:leading-10`}>
+        fontSize: isTablet ? '1.6rem' : '0.8rem',
+      }}
+        className={`${isDarkMode ? 'text- white' : 'text-black'} desktop:leading-10`}>
         <span style={{ color: '#ffccff' }}>const </span><span style={{ color: '#9cdcfe' }}>getDeveloperStatus </span>
         <span style={{ color: '#ffccff' }}>= </span><span style={{ color: '#cc66ff' }}>(</span>
         <span style={{ color: 'white' }}>caffeineLevel</span><span style={{ color: '#ffccff' }}>: number</span><span style={{ color: '#cc66ff' }}>)</span>
@@ -44,10 +45,10 @@ export const Loading: React.FC<LoadingProps> = ({ setIsLoading }) => {
     </div>
     <div
       style={{ fontFamily: 'rato' }}
-      className={`${isDarkMode ? 'text-white' : 'text-gray-600'} desktop:text-3xl text-lg cursor-pointer`}
+      className={`${isDarkMode ? 'text-white' : 'text-gray-600'} desktop:text-4xl text-3xl cursor-pointer hover:text-sky-500`}
       onClick={handleClick}
     >
-      Skip Coffee <span style={{ color: '#ffccff' }}>=&gt;</span>
+      Skip Coffee <span className="text-sky-500">=&gt;</span>
     </div>
 
   </div >)
