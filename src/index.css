@@ -100,6 +100,7 @@ img {
   src: url('/src/font/Rato-PKBOx.otf') format('truetype');
 }
 
+/* TagCloud */
 .tagcloud {
   display: inline-block;
   top: 0;
@@ -112,4 +113,67 @@ img {
 .tagcloud--item {
   color: rgb(14 165 233);
   text-transform: uppercase;
+}
+
+/* Loading Animation*/
+@-webkit-keyframes coffee {
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+@keyframes coffee {
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+.coffee {
+  background: #0284c7;
+  display: grid;
+  border-radius: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  padding: 2px;
+  justify-items: center;
+}
+.coffee:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  content: '';
+  height: 36px;
+  width: 30px;
+  border: 4px solid #0284c7;
+  position: absolute;
+  top: 40%;
+  margin-top: -13px;
+  margin-left: -10px;
+  left: 100%;
+  border-radius: 8px;
+}
+.coffee div {
+  height: 32px;
+  width: 12px;
+  background: #0284c7;
+  opacity: 1;
+  -webkit-animation: coffee 2s infinite;
+  animation: coffee 2s infinite;
+}
+.coffee div:nth-child(1) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.coffee div:nth-child(2) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.coffee div:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }

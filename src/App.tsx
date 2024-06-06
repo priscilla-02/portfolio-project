@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar/navbar';
 import Home from './Pages/Home';
 import { Connect } from './Pages/Home/connect';
 import { AboutMe } from './Pages/Home/about';
+import NotFound from './Pages/Home/notFound';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutMe />} />
         <Route path="/connect" element={<Connect />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
