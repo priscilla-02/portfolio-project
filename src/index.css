@@ -22,7 +22,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   .text-gradient {
-    animation-duration: gradientAnimationMobil 5s infinite;
+    animation-duration: gradientAnimationMobile 5s infinite;
   }
 }
 
@@ -88,6 +88,21 @@ img {
 
 .filter-effect {
   filter: grayscale(70%) blur(6px);
+}
+
+.slide-right {
+  animation: 3s slide-right;
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 @font-face {

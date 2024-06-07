@@ -17,9 +17,8 @@ export function AboutMe() {
 
   return (
     <div
-      className={`flex-row justify-center text-center desktop:p-36 desktop:w-auto w-screen ${
-        isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
-      }`}
+      className={`flex-row justify-center text-center desktop:p-36 desktop:w-auto w-screen ${isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
+        }`}
     >
       <div className="flex flex-col desktop:flex-row justify-center align-center items-center desktop:pt-0 pt-16">
         <div className="desktop:max-w-[40vw] max-w-[80vw]">
@@ -32,7 +31,7 @@ export function AboutMe() {
             PRISCILLA CHAN
           </header>
           <div
-            className="text-xl desktop:py-15 desktop:pb-6 desktop:m-5"
+            className="slide-right text-xl desktop:py-15 desktop:pb-6 desktop:m-5"
             style={{
               fontFamily: 'rato',
             }}
@@ -93,28 +92,25 @@ export function AboutMe() {
                 ? 'Image of a kitten coding on a laptop'
                 : 'GIF of a kitten coding on a laptop'
             }
-            className={`desktop:m-5 desktop:mt-0 mt-5 border-2 border-gray-400 p-2.5 rounded-full cursor-pointer desktop:w-[400px] desktop:h-[400px] w-[300px] h-[300px] ${
-              isHovered
+            className={`desktop:m-5 desktop:mt-0 mt-5 border-2 border-gray-400 p-2.5 rounded-full cursor-pointer desktop:w-[400px] desktop:h-[400px] w-[300px] h-[300px] ${isHovered
                 ? 'rotate-out filter-effect blur-md ring-inset ring-[4px] ring-blue-400'
                 : 'rotate-in'
-            }`}
+              }`}
           />
 
           <div
-            className={`absolute top-0 left-0 right-0 bottom-0 m-auto flex flex-col items-center justify-center text-blue-500 desktop:text-2xl text-base font-thin desktop:max-w-[80%] max-w-[60%] ${
-              isHovered
+            className={`absolute top-0 left-0 right-0 bottom-0 m-auto flex flex-col items-center justify-center text-blue-500 desktop:text-2xl text-base font-thin desktop:max-w-[80%] max-w-[60%] ${isHovered
                 ? 'visible transition-all duration-5000 ease-in-out text-opacity-100'
                 : 'hidden text-opacity-0'
-            }`}
+              }`}
           >
             {funFactsAboutMe.map(fact => (
               <p key={fact}>{fact}</p>
             ))}
           </div>
           <div
-            className={`flex justify-center items-center text-sm ${
-              isHovered ? 'invisible' : 'visible'
-            }`}
+            className={`flex justify-center items-center text-sm ${isHovered ? 'invisible' : 'visible'
+              }`}
           >
             <p>Flip to know a little more about me</p>
             <img src={rightArrowIcon} className="w-6 h-6" />

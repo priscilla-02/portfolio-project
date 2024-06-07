@@ -1,12 +1,50 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTheme } from '../../Hooks/themeHook';
 import { projectsArray } from '../../Constants';
 import { useMediaQuery } from 'react-responsive';
 
 export function Projects() {
+  const [visibleProjects, setVisibleProjects] = useState<{ [key: string]: boolean }>({})
+  const divRefs = useRef<(HTMLDivElement | null)[]>([]);
+
   const [isHovered, setIsHovered] = useState<null | string>(null);
   const { isDarkMode } = useTheme();
   const isDesktop = useMediaQuery({ minWidth: 1024 });
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = divRefs.current.indexOf(entry.target as HTMLDivElement);
+            if (index !== -1) {
+              setVisibleProjects((prev) => ({
+                ...prev,
+                [projectsArray[index].project_name]: true,
+              }));
+              observer.unobserve(entry.target);
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    divRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      divRefs.current.forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
+    };
+  }, [projectsArray]);
+
 
   const handleProjectEnter = (projectName: string) => {
     setIsHovered(projectName);
@@ -31,23 +69,24 @@ export function Projects() {
         Projects
       </section>
       <div className="relative cursor-zoom-in flex-col justify-center items-center align-center flex desktop:m-0 p-4">
-        <div></div>
         {projectsArray.map((project, index) => (
           <div
             key={index}
-            className="container m-16"
+            className={`container m-16 ${visibleProjects[project.project_name] ? 'slide-right' : 'hidden'}`}
             onMouseOver={() => handleProjectEnter(project.project_name)}
             onMouseLeave={() => handleProjectLeave()}
+            ref={(el) => (divRefs.current[index] = el)}
           >
             <img
               key={project.project_image}
               src={project.project_image}
               className={`z-[-1] w-full h-full transition-all duration-1000 ease-in-out
-              ${
-                (project.project_name === 'SquareUp' ||
+              ${visibleProjects[project.project_name] ? 'block' : 'hidden'}
+
+              ${(project.project_name === 'SquareUp' ||
                   project.project_name === 'Claim Application') &&
                 ' w-[50vw] max-h-[600px] object-contain'
-              } 
+                } 
             
               ${isHovered === project.project_name ? 'blur-sm' : ''}`}
               alt={`${project.project_name} project`}
@@ -55,23 +94,21 @@ export function Projects() {
 
             {/* top-text-box */}
             <div
-              className={`absolute flex flex-col items-center justify-center align-center z-2 top-0 left-0 bg-gray transition-all duration-1000 ease-in-out ${
-                isHovered === project.project_name
-                  ? project.project_name === 'Claim Application' ||
-                    project.project_name === 'SquareUp'
-                    ? 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[55%] h-[45%] backdrop-blur-xl'
-                    : 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[60%] h-[90%] backdrop-blur-xl'
-                  : 'opacity-0 w-[10%] h-[10%]'
-              }`}
+              className={`absolute flex flex-col items-center justify-center align-center z-2 top-0 left-0 bg-gray transition-all duration-1000 ease-in-out ${isHovered === project.project_name
+                ? project.project_name === 'Claim Application' ||
+                  project.project_name === 'SquareUp'
+                  ? 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[55%] h-[45%] backdrop-blur-xl'
+                  : 'opacity-80 desktop:w-[60%] desktop:h-[60%] w-[60%] h-[90%] backdrop-blur-xl'
+                : 'opacity-0 w-[10%] h-[10%]'
+                }`}
             >
               <section
                 className={`flex justify-center align-center items-center flex-col px-2
-                 ${
-                   project.project_name === 'Recipes Radar' ||
-                   project.project_name === 'Claim Application'
-                     ? 'text-sky-500'
-                     : 'text-white'
-                 }`}
+                 ${project.project_name === 'Recipes Radar' ||
+                    project.project_name === 'Claim Application'
+                    ? 'text-sky-500'
+                    : 'text-white'
+                  }`}
                 style={{
                   fontFamily: 'rato',
                 }}
@@ -177,22 +214,20 @@ export function Projects() {
             {/* bottom-text-box */}
             <div
               className={`absolute flex flex-col items-center justify-center align-center z-2 bottom-0 right-0 bg-gray transition-all duration-1000 ease-in-out
-              } ${
-                isHovered === project.project_name
+              } ${isHovered === project.project_name
                   ? project.project_name === 'Claim Application'
                     ? 'opacity-80 desktop:w-[30%] desktop:h-[50%] w-[45%] h-[30%] backdrop-blur-xl'
                     : project.project_name === 'SquareUp'
-                    ? 'opacity-80 desktop:w-[30%] desktop:h-[50%] w-[40%] h-[30%] backdrop-blur-xl'
-                    : 'opacity-80 w-[35%] h-[55%] backdrop-blur-xl'
+                      ? 'opacity-80 desktop:w-[30%] desktop:h-[50%] w-[40%] h-[30%] backdrop-blur-xl'
+                      : 'opacity-80 w-[35%] h-[55%] backdrop-blur-xl'
                   : 'opacity-0 w-[10%] h-[10%]'
-              }`}
+                }`}
             >
               <section
-                className={`w-full flex flex-col align-center items-center desktop:p-20 desktop:mr-20 ${
-                  project.project_name === 'Claim4Tenants'
-                    ? 'text-sky-500'
-                    : 'text-white'
-                }`}
+                className={`w-full flex flex-col align-center items-center desktop:p-20 desktop:mr-20 ${project.project_name === 'Claim4Tenants'
+                  ? 'text-sky-500'
+                  : 'text-white'
+                  }`}
               >
                 {project.tech_stack_image.map((image, index) => (
                   <div
@@ -203,9 +238,8 @@ export function Projects() {
                       src={image}
                       alt={image}
                       className={`flex desktop:w-[60px] desktop:h-[60px] h-[20px] desktop:m-2 desktop:ml-10 
-                      ${
-                        project.project_name === 'NC News API' && 'bg-gray-300'
-                      }`}
+                      ${project.project_name === 'NC News API' && 'bg-gray-300'
+                        }`}
                     />
                     <span
                       className="ml-3"
