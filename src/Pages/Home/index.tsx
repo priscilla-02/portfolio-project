@@ -1,29 +1,30 @@
-import { useTheme } from '../../Hooks/themeHook';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { AboutMe } from './about';
 import { Connect } from './connect';
 import { Footer } from './footer';
 import { Projects } from './projects';
 import { Skills } from './skills';
 import { Loading } from './loading';
+import { LoadingContext } from '../../Hooks/useContext';
 
 
 function Home() {
-  const { isDarkMode } = useTheme();
-  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const { isLoading, setIsLoading } = useContext(LoadingContext)
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 10000);
+    }, 9000);
   });
 
 
 
   return (
-    <div className={`${isDarkMode ? 'bg-slate-500' : 'bg-gray-300'}`}>
+    <>
       {isLoading ? (
-        <Loading setIsLoading={setIsLoading} />
+        <div className="bg-gray-600">
+          <Loading />
+        </div >
       ) : (
         <div>
           <AboutMe />
@@ -34,7 +35,7 @@ function Home() {
         </div>
       )
       }
-    </div >
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { DarkModeToggle } from './darkmode';
 import { useTheme } from '../../Hooks/themeHook';
+import { LoadingContext } from '../../Hooks/useContext';
 import menuIcon from '/assets/icons/menu.svg';
 import homeOutlineIcon from '/assets/icons/home-outline.svg';
 import homeSolidIcon from '/assets/icons/home-solid.svg';
@@ -12,6 +13,7 @@ import connectOutlineIcon from '/assets/icons/connect-outline.svg';
 import connectSolidIcon from '/assets/icons/connect-solid.svg';
 
 export default function Navbar() {
+  const { isLoading } = useContext(LoadingContext);
   const [expandNavbar, setExpandNavbar] = useState<boolean>(false);
   const [isHomeHovered, setIsHomeHovered] = useState<boolean>(false);
   const [isTechStackHovered, setIsTechStackHovered] = useState<boolean>(false);
@@ -22,9 +24,8 @@ export default function Navbar() {
 
   return (
     <div
-      className={`h-auto pb-5 ${expandNavbar ? '' : ''} ${
-        isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
-      }`}
+      className={`h-auto pb-5 ${isLoading ? 'hidden' : 'block'} ${isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
+        }`}
     >
       <div className="w-full h-24 flex items-center justify-between">
         <div className="ml-12 py-3 h-18 align-middle select-none transition duration-200 ease-in">
@@ -51,9 +52,8 @@ export default function Navbar() {
       </div>
 
       <nav
-        className={`w-full h-full my-20 flex items-center justify-center  ${
-          expandNavbar ? 'flex-col justify-start mt-24' : 'hidden'
-        }`}
+        className={`w-full h-full my-20 flex items-center justify-center  ${expandNavbar ? 'flex-col justify-start mt-24' : 'hidden'
+          }`}
       >
         <div className="flex-col">
           <div className="flex justify-center items-center align-center">
@@ -64,9 +64,8 @@ export default function Navbar() {
             />
             <a
               href="#aboutme"
-              className={`w-full text-center text-3xl ${
-                expandNavbar ? 'w-full text-center m-8' : 'hidden'
-              }`}
+              className={`w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
+                }`}
               onMouseEnter={() => setIsHomeHovered(true)}
               onMouseLeave={() => setIsHomeHovered(false)}
               onTouchStart={() => setIsHomeHovered(true)}
@@ -91,9 +90,8 @@ export default function Navbar() {
             />
             <a
               href="#techStack"
-              className={`w-full text-center text-3xl ${
-                expandNavbar ? 'w-full text-center m-8' : 'hidden'
-              }`}
+              className={`w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
+                }`}
               onMouseEnter={() => setIsTechStackHovered(true)}
               onMouseLeave={() => setIsTechStackHovered(false)}
               onTouchStart={() => setIsTechStackHovered(true)}
@@ -116,9 +114,8 @@ export default function Navbar() {
             />
             <a
               href="#projects"
-              className={`w-full text-center text-3xl ${
-                expandNavbar ? 'w-full text-center m-8' : 'hidden'
-              }`}
+              className={`w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
+                }`}
               onMouseEnter={() => setIsProjectsHovered(true)}
               onMouseLeave={() => setIsProjectsHovered(false)}
               onTouchStart={() => setIsProjectsHovered(true)}
@@ -141,9 +138,8 @@ export default function Navbar() {
             />
             <a
               href="#connect"
-              className={`w-full text-center text-3xl ${
-                expandNavbar ? 'w-full text-center m-8' : 'hidden'
-              }`}
+              className={`w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
+                }`}
               onMouseEnter={() => setIsConnectHovered(true)}
               onMouseLeave={() => setIsConnectHovered(false)}
               onTouchStart={() => setIsConnectHovered(true)}
