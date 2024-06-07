@@ -1,5 +1,5 @@
 import { useTheme } from '../../Hooks/themeHook';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AboutMe } from './about';
 import { Connect } from './connect';
 import { Footer } from './footer';
@@ -11,6 +11,13 @@ import { Loading } from './loading';
 function Home() {
   const { isDarkMode } = useTheme();
   const [isLoading, setIsLoading] = useState<boolean>(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 10000);
+  });
+
 
 
   return (
