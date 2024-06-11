@@ -17,7 +17,7 @@ export function Footer() {
             fontFamily: 'rato',
           }}
         >
-          <p>© 2024 Priscilla Chan.</p>
+          <p>© 2024 Priscilla Chan</p>
           <p>All Rights Reserved.</p>
         </div>
       </div>
