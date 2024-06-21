@@ -1,6 +1,6 @@
 import { useTheme } from '../../Hooks/themeHook';
 import { useNavigate } from 'react-router-dom';
-import notFoundGif from "../../../public/assets/images/notFound/notFound.gif"
+import notFoundGif from "/assets/images/notFound/notFound.gif"
 
 export default function NotFound() {
   const { isDarkMode } = useTheme();

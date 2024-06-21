@@ -1,12 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import { useTheme } from '../../Hooks/themeHook';
 import { useMediaQuery } from 'react-responsive';
 import { useContext, useEffect, useState } from 'react';
 import { LoadingContext } from '../../Hooks/useContext';
 
 
 export const Loading = () => {
-  // const { isDarkMode } = useTheme();
   const { setIsLoading } = useContext(LoadingContext);
   const isTablet = useMediaQuery({ minWidth: 768 });
   const navigate = useNavigate();

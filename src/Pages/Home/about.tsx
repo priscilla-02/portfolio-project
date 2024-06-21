@@ -93,15 +93,15 @@ export function AboutMe() {
                 : 'GIF of a kitten coding on a laptop'
             }
             className={`desktop:m-5 desktop:mt-0 mt-5 border-2 border-gray-400 p-2.5 rounded-full cursor-pointer desktop:w-[400px] desktop:h-[400px] w-[300px] h-[300px] ${isHovered
-                ? 'rotate-out filter-effect blur-md ring-inset ring-[4px] ring-blue-400'
-                : 'rotate-in'
+              ? 'rotate-out filter-effect blur-md ring-inset ring-[4px] ring-blue-400'
+              : 'rotate-in'
               }`}
           />
 
           <div
             className={`absolute top-0 left-0 right-0 bottom-0 m-auto flex flex-col items-center justify-center text-blue-500 desktop:text-2xl text-base font-thin desktop:max-w-[80%] max-w-[60%] ${isHovered
-                ? 'visible transition-all duration-5000 ease-in-out text-opacity-100'
-                : 'hidden text-opacity-0'
+              ? 'visible transition-all duration-5000 ease-in-out text-opacity-100'
+              : 'hidden text-opacity-0'
               }`}
           >
             {funFactsAboutMe.map(fact => (
