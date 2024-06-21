@@ -41,7 +41,7 @@ export function AboutMe() {
             While I have built various full-stack projects, my true passion lies
             in creating immersive front-end experiences.
           </div>
-          <div className="desktop:mt-5 desktop:visible invisible">
+          <div className="desktop:mt-10 desktop:visible invisible">
             <div className="flex">
               <a
                 href="#techStack"
