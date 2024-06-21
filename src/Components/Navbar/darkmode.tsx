@@ -10,7 +10,7 @@ export const DarkModeToggle = () => {
         type="checkbox"
         name="toggle"
         id="toggle"
-        className="toggle-checkbox absolute block w-9 h-8 rounded-full bg-sky-600 border-4 appearance-none cursor-pointer transition-transform"
+        className="toggle-checkbox absolute block w-10 h-8 rounded-full bg-sky-600 border-4 appearance-none cursor-pointer transition-transform"
         checked={isDarkMode}
         onChange={() => {
           toggleDarkMode();
