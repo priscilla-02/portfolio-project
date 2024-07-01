@@ -23,19 +23,12 @@ export function AboutMe() {
       <div className="flex flex-col desktop:flex-row justify-center align-center items-center desktop:pt-0 pt-16">
         <div className="desktop:max-w-[40vw] max-w-[80vw]">
           <header
-            className="mask text-gradient desktop:text-8xl text-7xl font-bold pb-10 "
-            style={{
-              fontFamily: 'OliverKitchen',
-            }}
+            className="mask text-gradient desktop:text-8xl text-7xl font-bold pb-10 font-['OliverKitchen']"
           >
             PRISCILLA CHAN
           </header>
           <div
-            className="slide-right text-xl desktop:py-15 desktop:pb-6 desktop:m-5"
-            style={{
-              fontFamily: 'rato',
-            }}
-          >
+            className="slide-right text-xl desktop:py-15 desktop:pb-6 desktop:m-5 font-['rato']">
             Hey there! I have transitioned from a non-tech background to become
             a software developer. The journey has been challenging but exciting.
             While I have built various full-stack projects, my true passion lies
@@ -45,29 +38,20 @@ export function AboutMe() {
             <div className="flex">
               <a
                 href="#techStack"
-                className="flex items-center text-lg bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-2 px-6 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-8 desktop:visible invisible"
-                style={{
-                  fontFamily: 'rato',
-                  whiteSpace: 'nowrap',
-                }}
+                className="font-['rato'] whitespace-nowrap flex items-center text-lg bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-2 px-6 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-8 desktop:visible invisible"
               >
                 Tech Stack
               </a>
               <a
                 href="#projects"
-                className="flex items-center text-lg bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-2 px-6 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-8 desktop:visible invisible"
-                style={{
-                  fontFamily: 'rato',
-                }}
+                className="font-['rato'] flex items-center text-lg bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-2 px-6 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-8 desktop:visible invisible"
+
               >
                 Projects
               </a>
               <a
                 href="#connect"
-                className="flex items-center text-lg bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-2 px-6 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-8 desktop:visible invisible"
-                style={{
-                  fontFamily: 'rato',
-                }}
+                className="font-['rato'] flex items-center text-lg bg-gradient-to-r from-sky-400 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white py-2 px-6 border-b-8 border-blue-700 hover:border-blue-500 rounded-full m-8 desktop:visible invisible"
               >
                 Connect
               </a>
@@ -76,14 +60,11 @@ export function AboutMe() {
         </div>
 
         <section
-          className="image-container relative"
+          className="font-['rato'] image-container relative"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onTouchStart={() => setIsHovered(true)}
           onTouchEnd={handleTouchEnd}
-          style={{
-            fontFamily: 'rato',
-          }}
         >
           <img
             src={isHovered ? codingImg : codingGIF}

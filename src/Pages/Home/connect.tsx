@@ -19,67 +19,53 @@ export function Connect() {
   return (
     <div
       id="connect"
-      className={`flex justify-center items-center font-extrabold h-[500px] ${
-        isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
-      }`}
+      className={`flex justify-center items-center font-extrabold h-[500px] ${isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
+        }`}
     >
       <div className="flex-col">
         <p
-          className="mb-10 desktop:text-4xl text-2xl"
-          style={{
-            fontFamily: 'rato',
-          }}
+          className="font-['rato'] mb-10 desktop:text-4xl text-2xl"
         >
           Connect with me here:
         </p>
 
         <div className="flex items-center align-center justify-center">
           <div
-            className={`mx-7 ${
-              isHovered === 'github' ? 'rotate-out' : 'rotate-in'
-            }`}
+            className={`relative mx-7 ${isHovered === 'github' ? 'rotate-out' : 'rotate-in'
+              }`}
             onMouseEnter={() => handleIconEnter('github')}
             onMouseLeave={handleIconLeave}
             onTouchStart={() => handleIconEnter('github')}
             onTouchEnd={handleIconLeave}
-            style={{
-              position: 'relative',
-            }}
           >
             <a href="https://github.com/priscilla-02" target="_blank">
               <div
-                className={`rounded-full border-2 border-black p-3.5 ${
-                  isHovered === 'github'
-                    ? 'ring-inset ring-[6px] ring-blue-400'
-                    : ''
-                }`}
+                className={`rounded-full border-2 border-black p-3.5 ${isHovered === 'github'
+                  ? 'ring-inset ring-[6px] ring-blue-400'
+                  : ''
+                  }`}
               >
                 <GitHubIcon style={{ fontSize: 30 }} />
               </div>
             </a>
           </div>
           <div
-            className={`mx-5 ${
-              isHovered === 'linkedin' ? 'rotate-out' : 'rotate-in'
-            }`}
+            className={`relative mx-5 ${isHovered === 'linkedin' ? 'rotate-out' : 'rotate-in'
+              }`}
             onMouseEnter={() => handleIconEnter('linkedin')}
             onMouseLeave={handleIconLeave}
             onTouchStart={() => handleIconEnter('linkedin')}
             onTouchEnd={handleIconLeave}
-            style={{
-              position: 'relative',
-            }}
           >
             <a
               href="https://www.linkedin.com/in/priscilla-chan-554153138/"
               target="_blank"
             >
               <div
-                className={`rounded-full border-2 border-black p-2 ${
-                  isHovered === 'linkedin'
-                    ? 'ring-inset ring-[6px] ring-blue-400'
-                    : ''
-                }`}
+                className={`rounded-full border-2 border-black p-2 ${isHovered === 'linkedin'
+                  ? 'ring-inset ring-[6px] ring-blue-400'
+                  : ''
+                  }`}
               >
                 <LinkedInIcon style={{ fontSize: 40 }} />
               </div>
@@ -87,24 +73,19 @@ export function Connect() {
           </div>
 
           <div
-            className={`mx-5 ${
-              isHovered === 'email' ? 'rotate-out' : 'rotate-in'
-            }`}
+            className={`mx-5 relative ${isHovered === 'email' ? 'rotate-out' : 'rotate-in'
+              }`}
             onMouseEnter={() => handleIconEnter('email')}
             onMouseLeave={handleIconLeave}
             onTouchStart={() => handleIconEnter('email')}
             onTouchEnd={handleIconLeave}
-            style={{
-              position: 'relative',
-            }}
           >
             <a href="mailto:priscilla.chankwaitung@gmail.com" target="_blank">
               <div
-                className={`rounded-full border-2 border-black p-2 ${
-                  isHovered === 'email'
-                    ? 'ring-inset ring-[6px] ring-blue-400'
-                    : ''
-                }`}
+                className={`rounded-full border-2 border-black p-2 ${isHovered === 'email'
+                  ? 'ring-inset ring-[6px] ring-blue-400'
+                  : ''
+                  }`}
               >
                 <EmailIcon style={{ fontSize: 40 }} />
               </div>

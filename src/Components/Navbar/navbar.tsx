@@ -64,7 +64,7 @@ export default function Navbar() {
             />
             <a
               href="#aboutme"
-              className={`w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
+              className={`font-['rato'] w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
                 }`}
               onMouseEnter={() => setIsHomeHovered(true)}
               onMouseLeave={() => setIsHomeHovered(false)}
@@ -72,9 +72,6 @@ export default function Navbar() {
               onTouchEnd={() => setIsHomeHovered(false)}
               onClick={() => {
                 setExpandNavbar(false);
-              }}
-              style={{
-                fontFamily: 'rato',
               }}
             >
               Home
@@ -90,7 +87,7 @@ export default function Navbar() {
             />
             <a
               href="#techStack"
-              className={`w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
+              className={`font-['rato'] w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
                 }`}
               onMouseEnter={() => setIsTechStackHovered(true)}
               onMouseLeave={() => setIsTechStackHovered(false)}
@@ -98,9 +95,6 @@ export default function Navbar() {
               onTouchEnd={() => setIsTechStackHovered(false)}
               onClick={() => {
                 setExpandNavbar(false);
-              }}
-              style={{
-                fontFamily: 'rato',
               }}
             >
               Tech Stack
@@ -114,7 +108,7 @@ export default function Navbar() {
             />
             <a
               href="#projects"
-              className={`w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
+              className={`font-['rato'] w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
                 }`}
               onMouseEnter={() => setIsProjectsHovered(true)}
               onMouseLeave={() => setIsProjectsHovered(false)}
@@ -122,9 +116,6 @@ export default function Navbar() {
               onTouchEnd={() => setIsProjectsHovered(false)}
               onClick={() => {
                 setExpandNavbar(false);
-              }}
-              style={{
-                fontFamily: 'rato',
               }}
             >
               Projects
@@ -138,7 +129,7 @@ export default function Navbar() {
             />
             <a
               href="#connect"
-              className={`w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
+              className={`font-['rato'] w-full text-center text-3xl ${expandNavbar ? 'w-full text-center m-8' : 'hidden'
                 }`}
               onMouseEnter={() => setIsConnectHovered(true)}
               onMouseLeave={() => setIsConnectHovered(false)}
@@ -146,9 +137,6 @@ export default function Navbar() {
               onTouchEnd={() => setIsConnectHovered(false)}
               onClick={() => {
                 setExpandNavbar(false);
-              }}
-              style={{
-                fontFamily: 'rato',
               }}
             >
               Connect

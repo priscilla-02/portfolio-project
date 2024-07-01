@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTheme } from '../../Hooks/themeHook';
 import { projectsArray } from '../../Constants';
-import { useMediaQuery } from 'react-responsive';
 
 export function Projects() {
   const [visibleProjects, setVisibleProjects] = useState<{ [key: string]: boolean }>({})
@@ -9,7 +8,6 @@ export function Projects() {
 
   const [isHovered, setIsHovered] = useState<null | string>(null);
   const { isDarkMode } = useTheme();
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -61,10 +59,7 @@ export function Projects() {
        ${isDarkMode ? 'bg-slate-500' : 'bg-gray-300'}`}
     >
       <section
-        className="flex justify-center text-4xl"
-        style={{
-          fontFamily: 'rato',
-        }}
+        className="font-['rato'] flex justify-center text-4xl"
       >
         Projects
       </section>
@@ -103,30 +98,23 @@ export function Projects() {
                 }`}
             >
               <section
-                className={`flex justify-center align-center items-center flex-col px-2
+                className={`font-['rato'] flex justify-center align-center items-center flex-col px-2
                  ${project.project_name === 'Recipes Radar' ||
                     project.project_name === 'Claim Application'
                     ? 'text-sky-500'
                     : 'text-white'
                   }`}
-                style={{
-                  fontFamily: 'rato',
-                }}
               >
                 <div
-                  className="underline"
-                  style={{
-                    fontSize: isDesktop ? '1.5rem' : '0.7rem',
-                  }}
+                  className="underline text-[0.7rem] desktop:text-[1.5rem]"
                 >
                   {project.project_name}
                 </div>
-                <div style={{ fontSize: isDesktop ? '1.2rem' : '0.7rem' }}>
+                <div className="text-[0.7rem] desktop:text-[1.2rem]">
                   {project.description}
                 </div>
                 <div
-                  className="mt-2"
-                  style={{ fontSize: isDesktop ? '1.2rem' : '0.6rem' }}
+                  className="mt-2 text-[0.6rem] desktop:text-[1.2rem]"
                 >
                   {project.project_name === 'Recipes Radar' ? (
                     <p>🚧 Working in Porgress: Mobile Responsive </p>
@@ -197,10 +185,7 @@ export function Projects() {
                             />
                           </svg>
                           <div
-                            className="deesktop:mx-2 mx-1"
-                            style={{
-                              fontSize: isDesktop ? '1.2rem' : '0.5rem',
-                            }}
+                            className="deesktop:mx-2 mx-1 text-[0.5rem] desktop:text-[1.2rem]"
                           >
                             Link
                           </div>
@@ -242,12 +227,7 @@ export function Projects() {
                         }`}
                     />
                     <span
-                      className="ml-3"
-                      style={{
-                        fontFamily: 'rato',
-                        fontSize: isDesktop ? '1.5rem' : '0.7rem',
-                        textAlign: 'left',
-                      }}
+                      className="ml-3 font-['rato'] text-[0.7rem] desktop:text-[1.5rem] text-left"
                     >
                       {project.tech_stack[index]}
                     </span>

@@ -1,12 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import { useMediaQuery } from 'react-responsive';
 import { useContext, useEffect, useState } from 'react';
 import { LoadingContext } from '../../Hooks/useContext';
 
 
 export const Loading = () => {
   const { setIsLoading } = useContext(LoadingContext);
-  const isTablet = useMediaQuery({ minWidth: 768 });
   const navigate = useNavigate();
   const [animationEnded, setAnimationEnded] = useState<boolean>(false);
 
@@ -42,28 +40,24 @@ export const Loading = () => {
       </section>
 
       <section className="flex flex-col text-start p-4 bg-gray-700">
-        <h1 style={{
-          whiteSpace: 'pre-line', color: '#c586c0',
-          fontSize: isTablet ? '1.6rem' : '0.8rem',
-        }}
-          className="text-black tablet:leading-10">
-          <span style={{ color: '#ffccff' }}>const </span><span style={{ color: '#9cdcfe' }}>getDeveloperStatus </span>
-          <span style={{ color: '#ffccff' }}>= </span><span style={{ color: '#cc66ff' }}>(</span>
-          <span style={{ color: 'white' }}>caffeineLevel</span><span style={{ color: '#ffccff' }}>: number</span><span style={{ color: '#cc66ff' }}>)</span>
-          <span style={{ color: '#ffccff' }}>=&gt;</span> <span style={{ color: '#cc66ff' }}>( </span><span style={{ color: '#3366ff' }}>{`{`}</span>
+        <h1
+          className=" tablet:leading-10 whitespace-pre-line text-[#c586c0] text-[0.8rem] tablet:text-[1.6rem]">
+          <span className="text-[#ffccff]" >const </span><span className="text-[#9cdcfe]">getDeveloperStatus </span>
+          <span className="text-[#ffccff]">= </span><span className="text-[#cc66ff]">(</span>
+          <span className="text-white">caffeineLevel</span><span className="text-[#ffccff]">: number</span><span className="text-[#cc66ff]">)</span>
+          <span className="text-[#ffccff]">=&gt;</span> <span className="text-[#cc66ff]">( </span><span className="text-[#3366ff]">{`{`}</span>
           <br />
-          <span style={{ color: 'white' }}>priscillaStatus: caffineLevel </span><span style={{ color: '#ffccff' }}>&gt;</span> <span style={{ color: '#dcdcaa' }}>5</span> <span style={{ color: '#ffccff' }}>? </span>
-          <span style={{ color: 'white' }}>"</span><span style={{ color: '#dcdcaa' }}>Coding...</span><span style={{ color: 'white' }}>" </span>
-          <span style={{ color: '#ffccff' }}>: </span>
-          <span style={{ color: 'white' }}>"</span><span style={{ color: '#dcdcaa' }}>BRB</span><span style={{ color: 'white' }}>" </span><span style={{ color: 'white' }}>,</span>
+          <span className="text-white">priscillaStatus: caffineLevel </span><span className="text-[#ffccff]">&gt;</span> <span className="text-[#dcdcaa]">5</span> <span className="text-[#ffccff]">? </span>
+          <span className="text-white">"</span><span className="text-[#dcdcaa]">Coding...</span><span className="text-white">" </span>
+          <span className="text-[#ffccff]">: </span>
+          <span className="text-white">"</span><span className="text-[#dcdcaa]">BRB</span><span className="text-white">" </span><span className="text-white">,</span>
           <br />
-          <span style={{ color: '#3366ff' }}>{`}`}</span><span style={{ color: '#cc66ff' }}>)</span>
+          <span className="text-[#3366ff]">{`}`}</span><span className="text-[#cc66ff]">)</span>
         </h1>
       </section>
 
       <div
-        style={{ fontFamily: 'rato' }}
-        className="text-white cursor-pointer hover:text-sky-500"
+        className="font-['rato'] text-white cursor-pointer hover:text-sky-500"
         onClick={handleClick}>
         Skip Coffee <span className="text-sky-500">=&gt;</span>
       </div>

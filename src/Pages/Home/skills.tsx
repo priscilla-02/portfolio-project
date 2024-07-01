@@ -7,17 +7,13 @@ export function Skills() {
 
   return (
     <div
-      className={`pt-32 desktop:pb-56 pb-32 ${
-        isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
-      }`}
+      className={`pt-32 desktop:pb-56 pb-32 ${isDarkMode ? 'bg-slate-500' : 'bg-gray-300'
+        }`}
     >
       <div className="flex justify-center items-center desktop:pb-10">
         <div
           id="techStack"
-          className="pt-10 text-center text-4xl"
-          style={{
-            fontFamily: 'rato',
-          }}
+          className="font-['rato'] pt-10 text-center text-4xl"
         >
           Tech Stack
         </div>
@@ -29,10 +25,7 @@ export function Skills() {
         <div className="flex flex-col items-center justify-center ">
           <section className="flex flex-col items-center justify-center p-10 text-3xl underline">
             <div
-              className="desktop:pt-15 pb-3"
-              style={{
-                fontFamily: 'rato',
-              }}
+              className="font-['rato'] desktop:pt-15 pb-3"
             >
               Languages
             </div>
@@ -56,10 +49,7 @@ export function Skills() {
 
           <section className="flex flex-col items-center justify-center py-5 text-3xl underline">
             <div
-              className="desktop:pt-15 pb-5"
-              style={{
-                fontFamily: 'rato',
-              }}
+              className="font-['rato'] desktop:pt-15 pb-5"
             >
               Frameworks & Libraries
             </div>

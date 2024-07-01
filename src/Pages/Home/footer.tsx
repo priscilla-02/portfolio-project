@@ -12,10 +12,7 @@ export function Footer() {
     <footer className="flex h-auto p-10 bg-slate-600 justify-center align-center items-center">
       <div className="flex ml-auto">
         <div
-          className=" desktop:text-2xl text-sm"
-          style={{
-            fontFamily: 'rato',
-          }}
+          className="font-['rato'] desktop:text-2xl text-sm"
         >
           <p>© 2024 Priscilla Chan</p>
           <p>All Rights Reserved.</p>
